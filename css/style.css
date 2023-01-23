@@ -16,6 +16,14 @@ header {
     background-color: #3e3e3e73; 
     opacity: 100%;
 }
+.logo {
+    margin: 0 auto;
+    height: 180px;
+    padding-bottom: 1em;
+    padding-top: 1cm;
+    display: block;
+    
+}
 
 h1 {
     text-align: center;

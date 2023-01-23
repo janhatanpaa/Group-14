@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    background-image: url(../assets/food.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+main {
+    margin-top: 3cm;
+    margin-bottom: 7cm;
+    text-align: center;
+}
+
+header {
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #FFF;
+    font-family: papyrus;
+    font-size: 50px;
+    font-weight:100;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: papyrus;
+    font-size: 30px;
+    font-weight:600;
+}
+p {
+    text-align: center;
+    font-family: Microsoft Yi Baiti;
+    font-size: 22px;
+    color: #FFF;
+    font-weight: lighter;
+}
+.contactus {
+    color: rgb(0, 0, 0);
+    background-color: rgb(215, 215, 215);
+    border-radius: 21px 21px 21px 21px;
+    padding: 0.7em;
+    font-family: Microsoft Yi Baiti;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.contactus:hover {
+    background-color: rgba(92, 92, 92, 0.781);
+    color: #c7c7c7;
+
+}
+.grey
+{
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+}
+.navbar
+{
+    margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.navbar a
+{
+    font: 20px Copperplate Gothic Light;
+    color: #FFF;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.711);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersIn a:before
+{
+    top: 1px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}

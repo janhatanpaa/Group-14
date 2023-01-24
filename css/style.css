@@ -130,3 +130,41 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     opacity: 1;
     transform: translateY(0px);
 }
+.footer 
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font: 20px Copperplate Gothic Light;
+    color: #FFF;
+    margin: 0px 10px;
+    background-color: #00000073;
+    padding: 1rem;
+	padding-top: 0px;
+    padding-bottom: 15px;
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.useful-link h2{
+    padding-top: 9px;
+	padding-bottom: 1px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.useful-link img{
+	padding-bottom: 15px;
+}
+.use-links{
+	line-height: 32px;
+}
+.use-links li i{
+	font-size: 14px;
+    padding-right: 8px;
+    color: #898989;
+}

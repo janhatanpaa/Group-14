@@ -169,11 +169,11 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     text-align: center;
 }
 
-.footer a {
-    font: 17px Copperplate Gothic Light;
+.footer p {
+    font-family: Copperplate Gothic Light;
     color: #FFF;
     text-align: center;
-    padding-top: 0cm;
+    line-height: 15px;
     
 }
 .copyright {

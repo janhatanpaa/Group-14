@@ -159,11 +159,18 @@ h4{
     color:#fff;
     font-family: papyrus;
 }
-p1{
+.p1{
     font-family: Trebuchet MS;
     color: #FFF;
     font-size: 18px;
     font-family: Microsoft Yi Baiti;
+    text-align: left;
+}
+
+.p2{
+    text-align: left;
+    font-weight:bold;
+    
 }
 .list{
     display: flex;
@@ -177,6 +184,7 @@ p1{
     font-size: 17px;
     font-weight: 600;
     position: relative;
+    display: inline;
 }
 .list li::after{
     content: "";

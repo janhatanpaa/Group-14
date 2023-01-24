@@ -67,7 +67,6 @@ h3 {
     font-size: 20px;
     font-weight:400;
 }
-
 p {
     font-family: Microsoft Yi Baiti;
     text-align: center;
@@ -171,11 +170,19 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 }
 
 .footer a {
-    font: 20px Copperplate Gothic Light;
+    font: 17px Copperplate Gothic Light;
     color: #FFF;
     text-align: center;
     padding-top: 0cm;
     
+}
+.copyright {
+    margin: 0 auto;
+    color: #FFF;
+    background-color: #00000073;
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+    text-align: center;
 }
 
 ol {

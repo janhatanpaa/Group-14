@@ -26,6 +26,10 @@ header {
     width: 75%;
     margin: 50px auto;
 }
+.servicesimg{
+    height: 75%;
+    width: 99%;
+}
 
 section {
     padding-top: 3cm;

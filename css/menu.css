@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-image: url(../assets/food.jpg);
+    background-image: url(../assets/food2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,7 +20,10 @@ header {
 
 .logo {
     margin: 0 auto;
-    height: 180px;
+    width: fit-content;
+    height: fit-content;
+    max-width: 45%;
+    max-height: 45%;
     padding-top: 1em;
     display: block;  
 }
@@ -166,7 +169,7 @@ p1{
 }
 .list li{
     color: #FFF;
-    margin: 0px 15px;
+    margin: 0px 10px;
     transition: .3s ease-in-out;
     font-size: 17px;
     font-weight: 600;
@@ -207,12 +210,20 @@ p1{
 }
 
 .box .box_img{
+    display: flex;
     width: 35%;
     text-align: center;
+    min-width: 1px;
+    min-height: 1px;
+    max-width: 130px;
+    max-height: 130px;
 }
 img{
-    width: 130px;
-    height: 130px;
+    display: flex;
+    min-width: 1px;
+    min-height: 1px;
+    max-width: 130px;
+    max-height: 130px;
 }
 
 section{

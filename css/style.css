@@ -63,8 +63,9 @@ h3 {
 p {
     text-align: center;
     font-family: Microsoft Yi Baiti;
-    font-size: 18px;
+    font-size: 22px;
     color: #FFF;
+    font-weight: lighter;
 }
 
 .contactus {

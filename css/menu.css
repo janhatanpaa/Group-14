@@ -255,6 +255,12 @@ section{
     opacity: 100%;
     text-align: center;
 }
+.footer a {
+    font: 20px Copperplate Gothic Light;
+    color: #FFF;
+    text-align: center;
+    
+}
 a{
     text-decoration: none;
     color: white;
@@ -283,7 +289,7 @@ a{
   
 .column {
     flex: 33.33%;
-    padding: 5px;
+    padding: 60px;
 }
 
 

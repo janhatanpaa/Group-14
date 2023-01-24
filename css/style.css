@@ -61,11 +61,10 @@ h3 {
 }
 
 p {
+    font-family: Trebuchet MS;
     text-align: center;
-    font-family: Microsoft Yi Baiti;
-    font-size: 22px;
+    font-size: 18px;
     color: #FFF;
-    font-weight: lighter;
 }
 
 .contactus {

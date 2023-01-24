@@ -91,6 +91,16 @@ p {
     text-decoration: none;
 }
 
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+
 div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
 {
     position: absolute;

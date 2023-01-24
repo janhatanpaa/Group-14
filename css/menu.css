@@ -169,7 +169,7 @@ p1{
 }
 .list li{
     color: #FFF;
-    margin: 0px 15px;
+    margin: 0px 10px;
     transition: .3s ease-in-out;
     font-size: 17px;
     font-weight: 600;
@@ -210,12 +210,20 @@ p1{
 }
 
 .box .box_img{
+    display: flex;
     width: 35%;
     text-align: center;
+    min-width: 1px;
+    min-height: 1px;
+    max-width: 130px;
+    max-height: 130px;
 }
 img{
-    width: 130px;
-    height: 130px;
+    display: flex;
+    min-width: 1px;
+    min-height: 1px;
+    max-width: 130px;
+    max-height: 130px;
 }
 
 section{

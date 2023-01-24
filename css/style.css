@@ -16,6 +16,10 @@ header {
     opacity: 100%;
 }
 
+section{
+padding-top: 3cm;
+}
+
 .logo {
     margin: 0 auto;
     width: fit-content;
@@ -36,10 +40,18 @@ h1 {
 
 h2 {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #FFF;
     font-family: papyrus;
-    font-size: 30px;
-    font-weight:600;
+    font-size: 40px;
+    font-weight:100;
+}
+
+h3 {
+    text-align: center;
+    color: #FFF;
+    font-family: papyrus;
+    font-size: 20px;
+    font-weight:400;
 }
 
 p {

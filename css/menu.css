@@ -247,8 +247,6 @@ section{
 .footer 
 {
     margin: 0 auto;
-
-   
     color: #FFF;
     background-color: #00000073;
     background-color: #3e3e3e73; 
@@ -260,6 +258,9 @@ section{
     color: #FFF;
     text-align: center;
     
+}
+ol {
+    padding-top: 10px;
 }
 a{
     text-decoration: none;

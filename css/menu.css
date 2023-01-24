@@ -123,6 +123,10 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 
 
 /* MENU PART */
+/* MENU PART */
+/* MENU PART */
+/* MENU PART */
+
 
 
 *{
@@ -207,7 +211,7 @@ h4{
     flex-wrap: wrap;
 }
 .box{
-    width: 32%;
+    width: 400px;
     background: #3e3e3e73; 
     opacity: 100%;
     border-radius: 5px;
@@ -243,6 +247,8 @@ section{
 .text{
     text-align: left;
     width: 60%;
+    font-weight: 600;
+    margin-bottom: 0px;
 }
 .text hr{
     width: 90%;
@@ -252,11 +258,6 @@ section{
     margin-bottom: 5px;
 }
 
-
-.text section{
-    font-weight: 600;
-    margin-bottom: 0px;
-}
 .footer 
 {
     margin: 0 auto;

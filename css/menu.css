@@ -138,6 +138,9 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 a {
   color: inherit;
   text-decoration: inherit;
+  font-family: Brush Script MT;
+  font-weight: 1;
+  font-size: 24px;
 }
 
 .container{
@@ -151,16 +154,17 @@ a {
 }
 h3{
     color: #FFF;
-    font-family: 'Lobster', cursive;
     font-size: 25px;
     margin-bottom: 20px;
 }
 h4{
     color:#fff;
+    font-family: papyrus;
 }
 p1{
     color: #FFF;
     font-size: 18px;
+    font-family: Microsoft Yi Baiti;
 }
 .list{
     display: flex;

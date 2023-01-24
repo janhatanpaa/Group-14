@@ -17,11 +17,12 @@ header {
 }
 
 .introduction {
-    font-family: Microsof Yi Baiti;
-    color: #FFF;
+    font-family: Microsoft Yi Baiti;
+    text-align: center;
     font-size: 18px;
-    padding-top: 1cm;
-    padding-bottom: 2cm;
+    color: #FFF;
+    width: 75%;
+    margin: 50px auto;
 }
 
 section {
@@ -31,11 +32,9 @@ section {
 
 .logo {
     margin: 0 auto;
-    width: fit-content;
-    height: fit-content;
-    max-width: 45%;
-    max-height: 45%;
-    padding-top: 1em;
+    width: 300px;
+    height:150px;
+    padding-top: 1.6em;
     display: block;  
 }
 

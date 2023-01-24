@@ -20,10 +20,8 @@ header {
 
 .logo {
     margin: 0 auto;
-    width: fit-content;
-    height: fit-content;
-    max-width: 45%;
-    max-height: 45%;
+    width: 300px;
+    height: 177px;
     padding-top: 1em;
     display: block;  
 }
@@ -223,7 +221,7 @@ p1{
     max-width: 130px;
     max-height: 130px;
 }
-img{
+.img{
     display: flex;
     min-width: 1px;
     min-height: 1px;

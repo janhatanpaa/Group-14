@@ -162,6 +162,7 @@ h4{
     font-family: papyrus;
 }
 p1{
+    font-family: Trebuchet MS;
     color: #FFF;
     font-size: 18px;
     font-family: Microsoft Yi Baiti;
@@ -238,7 +239,7 @@ section{
     width: 60%;
 }
 .text hr{
-    width: 75px;
+    width: 60px;
     background: #d4a373;
     height: 2px;
     border: 0;
@@ -250,9 +251,54 @@ section{
     font-weight: 600;
     margin-bottom: 0px;
 }
+.footer 
+{
+    margin: 0 auto;
+    color: #FFF;
+    background-color: #00000073;
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+    text-align: center;
+}
+.footer a {
+    font: 20px Copperplate Gothic Light;
+    color: #FFF;
+    text-align: center;
+    
+}
+ol {
+    padding-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.useful-link h2{
+    padding-top: 9px;
+	padding-bottom: 1px;
+	font-size: 20px;
+    font-weight: 600;
+}
+.useful-link img{
+	padding-bottom: 15px;
+}
+.use-links{
+	line-height: 32px;
+}
+.use-links li i{
+	font-size: 14px;
+    padding-right: 8px;
+    color: #898989;
+}
 
-
-
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 33.33%;
+    padding: 60px;
+}
 
 
 @keyframes movement{

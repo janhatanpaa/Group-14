@@ -226,11 +226,8 @@ a{
         padding-top: 1cm;
     }
     body {
-        margin: 0;
         background-image: url(../assets/mobilebg.png);
-        background-size: repeat-y;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-color: black;
+        background-size: cover;
+        background-position: center top;
     }
 }

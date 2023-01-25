@@ -331,6 +331,10 @@ a{
     color: #FFF;
 }
 
+.p5{
+    padding-top: 18px;
+}
+
 @keyframes movement{
     0%{
         opacity: 0;

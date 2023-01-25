@@ -244,6 +244,5 @@ a{
         background-image: url(../assets/mobilebg.png);
         background-size: cover;
         background-position: center top;
-        position: sticky;
     }
 }

@@ -167,6 +167,7 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     background-color: #3e3e3e73; 
     opacity: 100%;
     text-align: center;
+    overflow:auto; padding: 1em 0em;
 }
 
 .footer p {

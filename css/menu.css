@@ -272,6 +272,7 @@ section{
     background-color: #3e3e3e73; 
     opacity: 100%;
     text-align: center;
+    overflow:auto; padding: 1em 0em;
 }
 .footer a {
     color: #FFF;

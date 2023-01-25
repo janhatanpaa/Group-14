@@ -56,6 +56,7 @@ p {
     font-size: 22px;
     color: #FFF;
     font-weight: lighter;
+    text-decoration: none;
 }
 
 .contactus {
@@ -149,7 +150,7 @@ a {
   text-decoration: inherit;
   font-family: "Brush Script MT";
   font-weight: 1;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .container{
@@ -184,7 +185,7 @@ h4{
     
 }
 
-.h2{
+.p6{
     color: #FFF;
     font-size: 18px;
     font-family: "Microsoft Yi Baiti";
@@ -294,10 +295,6 @@ section{
     flex-shrink: 0;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
 .useful-link h2{
     padding-top: 9px;
 	padding-bottom: 1px;

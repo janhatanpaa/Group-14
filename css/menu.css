@@ -268,14 +268,12 @@ section{
     text-align: center;
 }
 .footer a {
-    font: 20px Copperplate Gothic Light;
     color: #FFF;
     text-align: center;
-    
+    font-family: Copperplate Gothic Light;
+    line-height: 15px;
 }
-ol {
-    padding-top: 10px;
-}
+
 a{
     text-decoration: none;
     color: white;
@@ -304,7 +302,23 @@ a{
   
 .column {
     flex: 33.33%;
-    padding: 60px;
+    padding: 5px;
+}
+
+.p3{
+     padding-top: 0px;
+     font-family: Copperplate Gothic Light;
+     text-align: center;
+     font-size: 18px;
+     color: #FFF;
+}
+
+.p4{
+    padding-top: 10px;
+    font-family: Copperplate Gothic Light;
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
 }
 
 

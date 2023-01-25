@@ -213,3 +213,15 @@ a{
     padding-right: 8px;
     color: #898989;
 }
+
+@media (max-width: 480px) {
+    section {
+        width: fit-content;
+    }
+    .row {
+        display:block;
+    }
+    .servicesimg {
+        padding-top: 1cm;
+    }
+}

@@ -184,11 +184,12 @@ h4{
     
 }
 
-.p6{
+.h2{
     color: #FFF;
     font-size: 18px;
     font-family: "Microsoft Yi Baiti";
     text-align: center;
+    font-weight: lighter;
 }
 
 .list{

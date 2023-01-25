@@ -9,7 +9,6 @@ body {
 
 main {
     padding-top: 3em;
-    padding-bottom: 3em;
     text-align: center;
 }
 
@@ -26,6 +25,19 @@ header {
     width: 75%;
     margin: 50px auto;
 }
+
+.contactbutton {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+span {
+    font-family: "Aparajita";
+    color: #FFF;
+    font-size: 18px;
+    
+}
+
 .servicesimg{
     height: 75%;
     width: 99%;
@@ -48,7 +60,7 @@ section {
 h1 {
     text-align: center;
     color: #FFF;
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 50px;
     font-weight:100;
 }
@@ -56,7 +68,7 @@ h1 {
 h2 {
     text-align: center;
     color: #FFF;
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 40px;
     font-weight:100;
 }
@@ -64,7 +76,7 @@ h2 {
 h3 {
     text-align: center;
     color: #FFF;
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 20px;
     font-weight:400;
 }

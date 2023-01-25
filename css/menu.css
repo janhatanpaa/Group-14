@@ -1,5 +1,9 @@
 /* STYLE PART*/
 
+html, body {
+    height: 100%;
+  }
+
 body {
     margin: 0;
     background-image: url(../assets/food2.png);
@@ -7,6 +11,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -123,13 +129,16 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 
 
 /* MENU PART */
+/* MENU PART */
+/* MENU PART */
+/* MENU PART */
+
 
 
 *{
     padding: 0;
     margin: 0;
     list-style: none;
-    box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -145,6 +154,7 @@ a {
     width: 75%;
     margin: 50px auto;
     text-align: center;
+    flex: 1 0 auto;
 }
 .title{
     width: 60%;
@@ -159,11 +169,18 @@ h4{
     color:#fff;
     font-family: papyrus;
 }
-p1{
+.p1{
     font-family: Trebuchet MS;
     color: #FFF;
     font-size: 18px;
     font-family: Microsoft Yi Baiti;
+    text-align: left;
+}
+
+.p2{
+    text-align: left;
+    font-weight:bold;
+    
 }
 .list{
     display: flex;
@@ -177,6 +194,7 @@ p1{
     font-size: 17px;
     font-weight: 600;
     position: relative;
+    display: inline;
 }
 .list li::after{
     content: "";
@@ -199,7 +217,7 @@ p1{
     flex-wrap: wrap;
 }
 .box{
-    width: 32%;
+    width: 400px;
     background: #3e3e3e73; 
     opacity: 100%;
     border-radius: 5px;
@@ -235,20 +253,17 @@ section{
 .text{
     text-align: left;
     width: 60%;
+    font-weight: 600;
+    margin-bottom: 0px;
 }
 .text hr{
-    width: 60px;
+    width: 90%;
     background: #d4a373;
     height: 2px;
     border: 0;
     margin-bottom: 5px;
 }
 
-
-.text section{
-    font-weight: 600;
-    margin-bottom: 0px;
-}
 .footer 
 {
     margin: 0 auto;
@@ -257,16 +272,16 @@ section{
     background-color: #3e3e3e73; 
     opacity: 100%;
     text-align: center;
+    overflow:auto; padding: 1em 0em;
 }
 .footer a {
-    font: 20px Copperplate Gothic Light;
     color: #FFF;
     text-align: center;
-    
+    font-family: Copperplate Gothic Light;
+    line-height: 15px;
+    flex-shrink: 0;
 }
-ol {
-    padding-top: 10px;
-}
+
 a{
     text-decoration: none;
     color: white;
@@ -295,9 +310,24 @@ a{
   
 .column {
     flex: 33.33%;
-    padding: 60px;
+    padding: 5px;
 }
 
+.p3{
+     padding-top: 0px;
+     font-family: Copperplate Gothic Light;
+     text-align: center;
+     font-size: 18px;
+     color: #FFF;
+}
+
+.p4{
+    padding-top: 10px;
+    font-family: Copperplate Gothic Light;
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+}
 
 @keyframes movement{
     0%{
@@ -305,29 +335,5 @@ a{
     }
     100%{
         opacity: 1;
-    }
-}
-
-@media(max-width: 1320px){
-    .box{
-        width: 49%;
-    }
-}
-@media(max-width: 991px){
-    .container .title{
-        width: 80%;
-    }
-    .box .box_img{
-        text-align: left;
-    }
-    .box_img img {
-        width: 170px;
-        height: 170px;
-    }
-    .box{
-        width: 100%;
-    }
-    .box .text{
-        width: 70%;
     }
 }

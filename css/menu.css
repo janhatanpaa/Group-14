@@ -13,6 +13,8 @@ body {
     background-color: black;
     display: flex;
     flex-direction: column;
+    background-size:cover;
+    background-position: center top;
 }
 
 main {
@@ -335,5 +337,22 @@ a{
     }
     100%{
         opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        width: fit-content;
+    }
+    .row {
+        display:block;
+    }
+    .servicesimg {
+        padding-top: 1cm;
+    }
+    body {
+        background-image: url(../assets/mobilebg.png);
+        background-size: cover;
+        background-position: center top;
     }
 }

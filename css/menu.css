@@ -35,7 +35,7 @@ header {
 h1 {
     text-align: center;
     color: #FFF;
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 50px;
     font-weight:100;
 }
@@ -43,14 +43,14 @@ h1 {
 h2 {
     text-align: center;
     color: rgb(0, 0, 0);
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 30px;
     font-weight:600;
 }
 
 p {
     text-align: center;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     font-size: 22px;
     color: #FFF;
     font-weight: lighter;
@@ -61,7 +61,7 @@ p {
     background-color: rgb(215, 215, 215);
     border-radius: 21px 21px 21px 21px;
     padding: 0.7em;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -88,7 +88,7 @@ p {
 
 .navbar a
 {
-    font: 20px Copperplate Gothic Light;
+    font: 20px "Copperplate Gothic Light";
     color: #FFF;
     margin: 0px 10px;
     padding: 10px 10px;
@@ -145,7 +145,7 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 a {
   color: inherit;
   text-decoration: inherit;
-  font-family: Brush Script MT;
+  font-family: "Brush Script MT";
   font-weight: 1;
   font-size: 24px;
 }
@@ -170,10 +170,10 @@ h4{
     font-family: papyrus;
 }
 .p1{
-    font-family: Trebuchet MS;
+    font-family: "Trebuchet MS";
     color: #FFF;
     font-size: 18px;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     text-align: left;
 }
 
@@ -277,7 +277,7 @@ section{
 .footer a {
     color: #FFF;
     text-align: center;
-    font-family: Copperplate Gothic Light;
+    font-family: "Copperplate Gothic Light";
     line-height: 15px;
     flex-shrink: 0;
 }
@@ -315,7 +315,7 @@ a{
 
 .p3{
      padding-top: 0px;
-     font-family: Copperplate Gothic Light;
+     font-family: "Copperplate Gothic Light";
      text-align: center;
      font-size: 18px;
      color: #FFF;
@@ -323,7 +323,7 @@ a{
 
 .p4{
     padding-top: 10px;
-    font-family: Copperplate Gothic Light;
+    font-family: "Copperplate Gothic Light";
     text-align: center;
     font-size: 18px;
     color: #FFF;

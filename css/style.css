@@ -19,7 +19,7 @@ header {
 }
 
 .introduction {
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     text-align: center;
     font-size: 18px;
     color: #FFF;
@@ -68,7 +68,7 @@ h3 {
     font-weight:400;
 }
 p {
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     text-align: center;
     font-size: 18px;
     color: #FFF;
@@ -83,7 +83,7 @@ p {
     background-color: rgb(215, 215, 215);
     border-radius: 21px 21px 21px 21px;
     padding: 1em;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     font-size: 19px;
     font-weight: 600;
     text-decoration: none;
@@ -110,7 +110,7 @@ p {
 
 .navbar a
 {
-    font: 20px Copperplate Gothic Light;
+    font: 20px "Copperplate Gothic Light";
     color: #FFF;
     margin: 0px 10px;
     padding: 10px 10px;
@@ -171,7 +171,7 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
 }
 
 .footer p {
-    font-family: Copperplate Gothic Light;
+    font-family: "Copperplate Gothic Light";
     color: #FFF;
     text-align: center;
     line-height: 15px;

@@ -1,5 +1,9 @@
 /* STYLE PART*/
 
+html, body {
+    height: 100%;
+  }
+
 body {
     margin: 0;
     background-image: url(../assets/food2.png);
@@ -7,6 +11,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -133,7 +139,6 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     padding: 0;
     margin: 0;
     list-style: none;
-    box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -149,6 +154,7 @@ a {
     width: 75%;
     margin: 50px auto;
     text-align: center;
+    flex: 1 0 auto;
 }
 .title{
     width: 60%;
@@ -272,6 +278,7 @@ section{
     text-align: center;
     font-family: Copperplate Gothic Light;
     line-height: 15px;
+    flex-shrink: 0;
 }
 
 a{

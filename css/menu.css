@@ -169,10 +169,9 @@ h3{
 }
 h4{
     color:#fff;
-    font-family: papyrus;
+    font-family: "papyrus";
 }
 .p1{
-    font-family: "Trebuchet MS";
     color: #FFF;
     font-size: 18px;
     font-family: "Microsoft Yi Baiti";
@@ -184,6 +183,14 @@ h4{
     font-weight:bold;
     
 }
+
+.p6{
+    color: #FFF;
+    font-size: 18px;
+    font-family: "Microsoft Yi Baiti";
+    text-align: center;
+}
+
 .list{
     display: flex;
     justify-content: center;

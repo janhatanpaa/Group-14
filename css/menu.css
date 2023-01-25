@@ -255,6 +255,8 @@ h4{
     min-height: 1px;
     max-width: 130px;
     max-height: 130px;
+    float:left;
+    margin-right: 5px;
 }
 
 section{
@@ -327,7 +329,7 @@ a{
      padding-top: 0px;
      font-family: "Copperplate Gothic Light";
      text-align: center;
-     font-size: 18px;
+     font-size: 13px;
      color: #FFF;
 }
 

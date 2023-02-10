@@ -1,5 +1,9 @@
 /* STYLE PART*/
 
+html, body {
+    height: 100%;
+  }
+
 body {
     margin: 0;
     background-image: url(../assets/food2.png);
@@ -7,6 +11,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+    background-position: center top;
 }
 
 main {
@@ -21,15 +29,15 @@ header {
 .logo {
     margin: 0 auto;
     width: 300px;
-    height: 177px;
-    padding-top: 1em;
+    height: 150px;
+    padding-top: 1.1em;
     display: block;  
 }
 
 h1 {
     text-align: center;
     color: #FFF;
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 50px;
     font-weight:100;
 }
@@ -37,17 +45,18 @@ h1 {
 h2 {
     text-align: center;
     color: rgb(0, 0, 0);
-    font-family: papyrus;
+    font-family: "papyrus";
     font-size: 30px;
     font-weight:600;
 }
 
 p {
     text-align: center;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     font-size: 22px;
     color: #FFF;
     font-weight: lighter;
+    text-decoration: none;
 }
 
 .contactus {
@@ -55,7 +64,7 @@ p {
     background-color: rgb(215, 215, 215);
     border-radius: 21px 21px 21px 21px;
     padding: 0.7em;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -82,7 +91,7 @@ p {
 
 .navbar a
 {
-    font: 20px Copperplate Gothic Light;
+    font: 20px "Copperplate Gothic Light";
     color: #FFF;
     margin: 0px 10px;
     padding: 10px 10px;
@@ -133,22 +142,22 @@ div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
     padding: 0;
     margin: 0;
     list-style: none;
-    box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: inherit;
-  font-family: Brush Script MT;
+  font-family: "Brush Script MT";
   font-weight: 1;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .container{
     width: 75%;
     margin: 50px auto;
     text-align: center;
+    flex: 1 0 auto;
 }
 .title{
     width: 60%;
@@ -161,13 +170,12 @@ h3{
 }
 h4{
     color:#fff;
-    font-family: papyrus;
+    font-family: "papyrus";
 }
 .p1{
-    font-family: Trebuchet MS;
     color: #FFF;
     font-size: 18px;
-    font-family: Microsoft Yi Baiti;
+    font-family: "Microsoft Yi Baiti";
     text-align: left;
 }
 
@@ -176,6 +184,15 @@ h4{
     font-weight:bold;
     
 }
+
+.p6{
+    color: #FFF;
+    font-size: 18px;
+    font-family: "Microsoft Yi Baiti";
+    text-align: center;
+    font-weight: lighter;
+}
+
 .list{
     display: flex;
     justify-content: center;
@@ -239,6 +256,8 @@ h4{
     min-height: 1px;
     max-width: 130px;
     max-height: 130px;
+    float:left;
+    margin-right: 5px;
 }
 
 section{
@@ -266,18 +285,16 @@ section{
     background-color: #3e3e3e73; 
     opacity: 100%;
     text-align: center;
+    overflow:auto; padding: 1em 0em;
 }
 .footer a {
     color: #FFF;
     text-align: center;
-    font-family: Copperplate Gothic Light;
+    font-family: "Copperplate Gothic Light";
     line-height: 15px;
+    flex-shrink: 0;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
 .useful-link h2{
     padding-top: 9px;
 	padding-bottom: 1px;
@@ -307,20 +324,23 @@ a{
 
 .p3{
      padding-top: 0px;
-     font-family: Copperplate Gothic Light;
+     font-family: "Copperplate Gothic Light";
      text-align: center;
-     font-size: 18px;
+     font-size: 13px;
      color: #FFF;
 }
 
 .p4{
     padding-top: 10px;
-    font-family: Copperplate Gothic Light;
+    font-family: "Copperplate Gothic Light";
     text-align: center;
     font-size: 18px;
     color: #FFF;
 }
 
+.p5{
+    padding-top: 18px;
+}
 
 @keyframes movement{
     0%{
@@ -331,26 +351,19 @@ a{
     }
 }
 
-@media(max-width: 1320px){
-    .box{
-        width: 49%;
+@media (max-width: 480px) {
+    section {
+        width: fit-content;
     }
-}
-@media(max-width: 991px){
-    .container .title{
-        width: 80%;
+    .row {
+        display:block;
     }
-    .box .box_img{
-        text-align: left;
+    .servicesimg {
+        padding-top: 1cm;
     }
-    .box_img img {
-        width: 170px;
-        height: 170px;
-    }
-    .box{
-        width: 100%;
-    }
-    .box .text{
-        width: 70%;
+    body {
+        background-image: url(../assets/mobilebg.png);
+        background-size: cover;
+        background-position: center top;
     }
 }

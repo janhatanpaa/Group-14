@@ -143,14 +143,38 @@ p {
     cursor: pointer;
     text-decoration: none;
 }
+.table{
+    text-align: center;
+    padding: 6px;
+    margin: auto;
+    text-transform: uppercase;
+}
+.row2{
+    
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    font-family: "Microsoft Yi Baiti";
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
 
+}
+.p2{
+    flex: 33.33%;
+    padding: 5px;
+    color: #0000;
+    text-align: left;
+    
+
+}
 .row {
     display: flex;
   }
-  
+
 .column {
     flex: 33.33%;
-    padding: 5px;
+    padding: 30px;
+    
 }
 
 
@@ -257,4 +281,24 @@ a{
         background-size: cover;
         background-position: center top;
     }
+    
+}
+input{
+padding: 3px;
+border-radius: 6px;
+border: 2px solid #bdc3c7;   
+border-top-width: 2px;  
+border-right-width: 2px;  
+border-bottom-width: 2px; 
+border-left-width: 2px;
+
+}
+
+form{
+    text-align: center;
+
+
+}
+.form_message{
+    height: 3cm;
 }

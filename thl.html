@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,7 @@
                 </td>
                 <td>
                     <form action='./php/thl_email.php' method='post'>
-                    <input type='text' name='arvo'>
+                    <input type='text' name='nimi'>
                 </td>  
                 
             </tr>
@@ -46,7 +47,7 @@
                 </td>
                 <td>
                     
-                    <input type='text' name='arvo'>
+                    <input type='text' name='sukunimi'>
                 </td>  
                 
             </tr>
@@ -57,7 +58,7 @@
                 </td>
                 <td>
                     
-                    <input type='text' name='arvo'>
+                    <input type='text' name='sahkoposti'>
                 </td>  
                 
             </tr>
@@ -68,7 +69,7 @@
                 </td>
                 <td>
                     
-                    <input type='text' name='arvo'>
+                    <input type='text' name='puh'>
                 </td>  
                 
             </tr>
@@ -78,7 +79,7 @@
                 </td>
                 <td>
                     
-                    <input class="form_message" type='text' name='arvo'>
+                    <input class="form_message" type='text' name='viesti'>
                 </td>  
                 
             </tr>
@@ -105,6 +106,18 @@
 
         
     </div>
+
+    <form method="post" action="./php/thl_email.php">
+
+
+        <textarea name="message"></textarea>
+        
+        
+        <input type="submit">
+        
+        
+        </form>
+        
     
     
 </body>

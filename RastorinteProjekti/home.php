@@ -14,6 +14,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
      <a href="../RastorinteProjekti/Reservations/poytavaraus.html">Make a table reservation</a><br>
      <a href="varaukset.html">My reservations</a><br>
      <a href="Reservations/myinfo.php">Change my information</a><br>
+     <a href="../thl.html">Apply for a job</a><br>
      <a href="logout.php">Sign out</a>
 </body>
 </html>

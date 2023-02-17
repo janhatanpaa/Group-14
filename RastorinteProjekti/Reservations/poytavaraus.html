@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html"><img class="logo" src="assets/rastorinte.png" alt="restaurant-rastorinte"></a>
+    <a href="index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
 </header>
 <nav>
     <div class="navbar grey topBotomBordersIn">
@@ -18,8 +18,14 @@
         <a href="gallery.html" style="font-size: 15px;">Gallery</a>
     </div>
 </nav>
-<div class="res_form grey">
+<script>
+window.onload = function(){
+    window.scrollTo(400, 400);
+}
+</script>
+<div class="res_form grey center">
     <form id='varauslomake' method='post' action='varmistavaraus.php'>
+      <img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
       <h1>Table reservation</h1>       
       <table>
         <tr>

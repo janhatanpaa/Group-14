@@ -36,8 +36,14 @@ $_SESSION["res_duration"]=$res_duration;
 </head>
 <body>
 <header>
-    <a href="index.html"><img class="logo" src="assets/rastorinte.png" alt="restaurant-rastorinte"></a>
+    <a href="index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
 </header>
+<script>
+window.onload = function(){
+    window.scrollTo(450, 450);
+}
+</script>
+
 <nav>
     <div class="navbar grey topBotomBordersIn">
         <a href="menu.html" style="font-size: 15px;">Menu</a>
@@ -45,14 +51,15 @@ $_SESSION["res_duration"]=$res_duration;
         <a href="gallery.html" style="font-size: 15px;">Gallery</a>
     </div>
 </nav>
-<div class="res_form grey">
+<div class="res_form grey center">
+<img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
     <h1>Table reservation information:</h1>
     <?php
-    echo "Name: $firstname $lastname<br>";
-    echo "Email: $email <br>";
-    echo "Phone number: $phn <br>";
-    echo "Reservation starting date and time: $date $start<br>";
-    echo "Reservation duration: $res_duration <br>";
+    echo "<p style=font-family: 'Abel, serif';'color:white'> Name: $firstname $lastname </p>";
+    echo "<p style='color:white'> Email: $email </p>";
+    echo "<p style='color:white'> Phone number: $phn </p>";
+    echo "<p style='color:white'> Reservation starting date and time: $date $start </p>";
+    echo "<p style='color:white'> Reservation duration: $res_duration </p>";
     ?>
     <h3>Do you want to confirm the reservation?</h3>
     <form action="teevaraus.php" method='post'>

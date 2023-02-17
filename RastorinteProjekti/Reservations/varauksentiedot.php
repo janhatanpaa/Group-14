@@ -23,18 +23,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
- 
+<script>
+window.onload = function(){
+    window.scrollTo(500, 500);
+}
+</script>
+<header>
+    <a href="index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
+</header>
+<nav>
+    <div class="navbar grey topBotomBordersIn">
+        <a href="menu.html" style="font-size: 15px;">Menu</a>
+        <a href="index.html" style="font-size: 24px;">Home</a>
+        <a href="gallery.html" style="font-size: 15px;">Gallery</a>
+    </div>
+</nav>
+<nav>
+<div class="res_form grey center">
+<img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
     <h1>Thank you for your reservation!</h1>
-    <p>Reservation information:</p>
+    <h2>Reservation information:</h2>
     <?php
-    echo "Name: $firstname $lastname<br>";
-    echo "Email: $email <br>";
-    echo "Phone number: $phn <br>";
-    echo "Reservation starting date and time: $date $start<br>";
-    echo "Reservation duration: $res_duration <br>";
+    echo "<p style=font-family: 'Abel, serif';'color:white'> Name: $firstname $lastname </p>";
+    echo "<p style='color:white'> Email: $email </p>";
+    echo "<p style='color:white'> Phone number: $phn </p>";
+    echo "<p style='color:white'> Reservation starting date and time: $date $start </p>";
+    echo "<p style='color:white'> Reservation duration: $res_duration </p>";
     ?>
     <a href="../home.php">My page</a>
+    </div>
 </body>
 </html>

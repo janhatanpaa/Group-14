@@ -29,7 +29,7 @@
 <body>
 <script>
 window.onload = function(){
-    window.scrollTo(500, 500);
+    window.scrollTo(415, 415);
 }
 </script>
 <header>
@@ -44,17 +44,18 @@ window.onload = function(){
 </nav>
 <nav>
 <div class="res_form grey center">
+<div class="res_form2">
 <img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
     <h1>Thank you for your reservation!</h1>
-    <h2>Reservation information:</h2>
-    <?php
-    echo "<p style=font-family: 'Abel, serif';'color:white'> Name: $firstname $lastname </p>";
-    echo "<p style='color:white'> Email: $email </p>";
-    echo "<p style='color:white'> Phone number: $phn </p>";
-    echo "<p style='color:white'> Reservation starting date and time: $date $start </p>";
-    echo "<p style='color:white'> Reservation duration: $res_duration </p>";
-    ?>
-    <a href="../home.php">My page</a>
+    <h4>Table reservation details:</h4>
+    <span> Reservation date and time: <?php echo "$date $start"?></span><br>
+    <span> Reservation duration: <?php echo $res_duration?></span><br>
+    <h4>Contact details:</h4>
+    <span> Name: <?php echo "$firstname $lastname"?></span><br>
+    <span> Email: <?php echo $email?></span><br>
+    <span> Phone number: <?php echo $phn?></span><br><br><br>
+    <a class="end" href="../home.php">Home</a>
     </div>
+</div>
 </body>
 </html>

@@ -40,7 +40,7 @@ $_SESSION["res_duration"]=$res_duration;
 </header>
 <script>
 window.onload = function(){
-    window.scrollTo(500, 500);
+    window.scrollTo(490, 490);
 }
 </script>
 
@@ -52,22 +52,24 @@ window.onload = function(){
     </div>
 </nav>
 <div class="res_form grey center">
+    <div class="res_form2">
 <img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
-    <h1>Table reservation information:</h1>
-    <?php
-    echo "<p style=font-family: 'Abel, serif';'color:white'> Name: $firstname $lastname </p>";
-    echo "<p style='color:white'> Email: $email </p>";
-    echo "<p style='color:white'> Phone number: $phn </p>";
-    echo "<p style='color:white'> Reservation starting date and time: $date $start </p>";
-    echo "<p style='color:white'> Reservation duration: $res_duration </p>";
-    ?>
-    <h2>Do you want to confirm the reservation?</h2>
+    <h1>Table reservation</h1>
+    <h4>Table reservation details:</h4>
+    <span> Reservation date and time: <?php echo "$date $start"?></span><br>
+    <span> Reservation duration: <?php echo $res_duration?></span><br>
+    <h4>Contact details:</h4>
+    <span> Name: <?php echo "$firstname $lastname"?></span><br>
+    <span> Email: <?php echo $email?></span><br>
+    <span> Phone number: <?php echo $phn?></span><br>
+    <h3>Do you want to confirm the reservation?</h3>
     <form action="teevaraus.php" method='post'>
     <div class="button center">
-    <input type='submit' name='ok' value='Confirm reservation'>
-        <button onclick="history.go(-1);">Cancel </button>
+    <input type='submit' class="send" name='ok' value='Confirm reservation'>
+        <button class="cancel" onclick="history.go(-1);">Cancel </button>
     </form>
     </div>
+ </div>
 </div>
 <footer>
       <div class="footer">  

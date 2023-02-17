@@ -40,7 +40,7 @@ $_SESSION["res_duration"]=$res_duration;
 </header>
 <script>
 window.onload = function(){
-    window.scrollTo(450, 450);
+    window.scrollTo(500, 500);
 }
 </script>
 
@@ -61,7 +61,7 @@ window.onload = function(){
     echo "<p style='color:white'> Reservation starting date and time: $date $start </p>";
     echo "<p style='color:white'> Reservation duration: $res_duration </p>";
     ?>
-    <h3>Do you want to confirm the reservation?</h3>
+    <h2>Do you want to confirm the reservation?</h2>
     <form action="teevaraus.php" method='post'>
     <div class="button center">
     <input type='submit' name='ok' value='Confirm reservation'>

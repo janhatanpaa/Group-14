@@ -168,10 +168,68 @@ table {
 .res_form {
     margin-top: 250px;
     margin-bottom: 250px;
+    padding-bottom: 15px;
 }
 .reserveimg {
     margin-top: 50px;
     margin-bottom: 50px;
     max-width: 25%;
     max-height: 25%;
+}
+input {
+    height: 35px;
+    border: none;
+    outline: none;
+    background: #c9c9c9;
+    color: #000000;
+    font-size: 12px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+input:hover {
+    background-color: #898989;
+}
+button {
+    height: 35px;
+    width: 110px;
+    border: none;
+    outline: none;
+    background: #c9c9c9;
+    color: #000000;
+    font-size: 12px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #898989;
+}
+.confirm {
+    width: 150px;
+}
+
+select {
+    height: 35px;
+    width: 110px;
+    border: none;
+    outline: none;
+    background: #c9c9c9;
+    color: #000000;
+    font-size: 12px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+select:hover {
+    background-color: #898989;
 }

@@ -20,17 +20,18 @@
 </nav>
 <script>
 window.onload = function(){
-    window.scrollTo(400, 400);
+    window.scrollTo(450, 450);
 }
 </script>
-<div class="res_form grey center">
+<div class="res_form grey">
+<div class="center">
     <form id='varauslomake' method='post' action='varmistavaraus.php'>
       <img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
       <h1>Table reservation</h1>       
       <table>
         <tr>
           <td><p>Reservation date:</p></td>
-          <td><input type="date" name='date'></td>
+          <td><input id="date" type="date" name='date'></td>
         </tr>
           <tr>
             <td><p>Reservation time:</p></td>
@@ -57,18 +58,16 @@ window.onload = function(){
               </td>
           </tr>
       </table>
-      <div class="button center">
-        <input type='submit' name='ok' value='Send'>
-        <button onclick="history.go(-1);">Cancel </button>
-      </div>   
+        <input style="width: 100px;" class="submit" type='submit' name='ok' value='Send'>
+        <button onclick="history.go(-1);">Cancel </button> 
     </form>
+</div>
 </div>
     <footer>
       <div class="footer">  
           <div class="row">
               <div class="column use-links">
                   <p>Rastorinte</p>
-                  
                       <p><a href="menu.html" style="font-size: 13px;">Menu</a></p>
                       <p><a href="index.html" style="font-size: 13px;">Home</a></p>
                       <p><a href="gallery.html" style="font-size: 13px;">Gallery</a></p>

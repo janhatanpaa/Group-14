@@ -7,8 +7,8 @@
     <title>Table reservation - Rastorinte</title>
 </head>
 <body>
-    <form id='varauslomake' method='post' action='teevaraus.php'>
-      <h2>Table reservation</h2>       
+    <form id='varauslomake' method='post' action='varmistavaraus.php'>
+      <h1>Table reservation</h1>       
         Reservation date: <input type="date" name='date'><br>
         Reservation time: <select type="time" name="start">
             <option value="14:00">14:00</option>
@@ -23,10 +23,10 @@
 
         Reservation duration (Max 4 hours): 
         <select name="res_duration">
-            <option value="1 Hour">1 Hour</option>
-            <option value="2 Hours">2 Hours</option>
-            <option value="3 Hours">3 Hours</option>
-            <option value="4 Hours">4 Hours</option>
+            <option value="1 hour">1 Hour</option>
+            <option value="2 hours">2 Hours</option>
+            <option value="3 hours">3 Hours</option>
+            <option value="4 hours">4 Hours</option>
           </select><br>
         <input type='submit' name='ok' value='Send'>
         <button onclick="history.go(-1);">Cancel </button>

@@ -16,9 +16,9 @@ $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
 $phn=isset($_SESSION["phn"]) ? $_SESSION["phn"] : "";
-$date=isset($_POST["date"]) ? $_POST["date"] : 0;
-$start=isset($_POST["start"]) ? $_POST["start"] : 0;
-$res_duration=isset($_POST["res_duration"]) ? $_POST["res_duration"] : "";
+$date=isset($_SESSION['date']) ? $_SESSION['date'] : "";
+$start=isset($_SESSION['start']) ? $_SESSION['start'] : "";
+$res_duration=isset($_SESSION['res_duration']) ? $_SESSION['res_duration'] : "";
 
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
@@ -32,5 +32,5 @@ mysqli_stmt_bind_param($stmt, 'sssssss', $firstname, $lastname, $email, $phn, $d
 mysqli_stmt_execute($stmt);
 //Suljetaan tietokantayhteys
 mysqli_close($yhteys);
-header("Location:./varauksentiedot.html");
+header("Location:./varauksentiedot.php");
 ?>

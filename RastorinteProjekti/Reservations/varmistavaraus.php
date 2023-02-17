@@ -30,9 +30,22 @@ $_SESSION["res_duration"]=$res_duration;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
+
     <title>Document</title>
 </head>
 <body>
+<header>
+    <a href="index.html"><img class="logo" src="assets/rastorinte.png" alt="restaurant-rastorinte"></a>
+</header>
+<nav>
+    <div class="navbar grey topBotomBordersIn">
+        <a href="menu.html" style="font-size: 15px;">Menu</a>
+        <a href="index.html" style="font-size: 24px;">Home</a>
+        <a href="gallery.html" style="font-size: 15px;">Gallery</a>
+    </div>
+</nav>
+<div class="res_form grey">
     <h1>Table reservation information:</h1>
     <?php
     echo "Name: $firstname $lastname<br>";
@@ -43,8 +56,36 @@ $_SESSION["res_duration"]=$res_duration;
     ?>
     <h3>Do you want to confirm the reservation?</h3>
     <form action="teevaraus.php" method='post'>
+    <div class="button center">
     <input type='submit' name='ok' value='Confirm reservation'>
         <button onclick="history.go(-1);">Cancel </button>
     </form>
+    </div>
+</div>
+<footer>
+      <div class="footer">  
+          <div class="row">
+              <div class="column use-links">
+                  <p>Rastorinte</p>
+                  
+                      <p><a href="menu.html" style="font-size: 13px;">Menu</a></p>
+                      <p><a href="index.html" style="font-size: 13px;">Home</a></p>
+                      <p><a href="gallery.html" style="font-size: 13px;">Gallery</a></p>
+                  </div>
+              <div class="column use-links">
+                  <p>Follow Us</p>          
+                      <p><a href="https://www.facebook.com/" style="font-size: 13px;">Facebook</a></p>
+                      <p><a href="https://www.instagram.com/" style="font-size: 13px;">instagram</a></p>
+                  </div>       
+              <div class="column use-links">
+                  <p>Address</p>
+                      <p style="font-size: 13px;">Jokutie 2 13100 Hämeenlinna</p>
+                      <p><a id="phone" style="font-size: 13px;">+35840 5656767 </a></p>
+                      <p><a style="font-size: 13px;">rastorinte@rastorinte.fi</a></p>
+                  </div>
+              </div>
+          </div>
+          <p class="copyright">©Copyright reserved to Joonas, Jan, Jami, Otto</p>
+      </footer>
 </body>
 </html>

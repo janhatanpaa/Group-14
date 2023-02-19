@@ -47,6 +47,7 @@ window.onload = function(){
         <a href="menu.html" style="font-size: 15px;">Menu</a>
         <a href="index.html" style="font-size: 24px;">Home</a>
         <a href="gallery.html" style="font-size: 15px;">Gallery</a>
+        <a href="../../rastorinteprojekti/acc/index.php" style="font-size: 15px; position: absolute; top: 27.5%; left: 75%;">Account</a>
     </div>
 </nav>
 <nav>
@@ -80,7 +81,7 @@ window.onload = function(){
         <span> Phone number: <?php echo $phn?></span>
     </section>
     <section>
-        <a class="end" href="../home.php">Home</a></section>
+        <a class="end" href="../acc/home.php">Home</a></section>
     </div>
 </div>
 </body>

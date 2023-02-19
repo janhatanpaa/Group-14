@@ -32,11 +32,11 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 		if (mysqli_num_rows($result) === 1) {
 			$row = mysqli_fetch_assoc($result);
             if ($row['user_name'] === $uname && $row['password'] === $pass) {
-            	$_SESSION['user_name'] = $row['user_name'];
-            	$_SESSION['firstname'] = $row['firstname'];
+				$_SESSION['firstname'] = $row['firstname'];
 				$_SESSION['lastname'] = $row['lastname'];
-				$_SESSION['email'] = $row['email'];
+            	$_SESSION['user_name'] = $row['user_name'];
 				$_SESSION['phn'] = $row['phn'];
+				$_SESSION['email'] = $row['email'];
             	$_SESSION['user_id'] = $row['user_id'];
             	header("Location: home.php");
 		        exit();

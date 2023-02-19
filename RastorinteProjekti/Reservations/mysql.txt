@@ -23,3 +23,6 @@ start varchar(6) NOT NULL,
 res_duration varchar(255) NOT NULL, 
 guest_amount VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+
+alter table reservations rename column table_size to guest_amount;

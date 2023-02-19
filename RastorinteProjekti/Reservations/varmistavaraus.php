@@ -12,16 +12,18 @@ catch(Exception $e){
 
 //Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
 //jos syötteet ovat olemassa
+
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
 $phn=isset($_SESSION["phn"]) ? $_SESSION["phn"] : "";
-$date=isset($_POST["date"]) ? $_POST["date"] : 0;
-$start=isset($_POST["start"]) ? $_POST["start"] : 0;
-$res_duration=isset($_POST["res_duration"]) ? $_POST["res_duration"] : "";
-$_SESSION["date"]=$date;
-$_SESSION["start"]=$start;
-$_SESSION["res_duration"]=$res_duration;
+$date=isset($_SESSION["date"]) ? $_SESSION["date"] : "";
+$start=isset($_SESSION["start"]) ? $_SESSION["start"] : 0;
+$res_duration=isset($_SESSION["res_duration"]) ? $_SESSION["res_duration"] : "";
+$table=isset($_POST["table"]) ? $_POST["table"] : "";
+$_SESSION["table"]=$table;
+$price = intval($res_duration) + intval($table);
+$_SESSION["price"]=$price;
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +34,7 @@ $_SESSION["res_duration"]=$res_duration;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
 
-    <title>Document</title>
+    <title>Table reservation - Rastorinte</title>
 </head>
 <body>
 <header>
@@ -53,30 +55,47 @@ window.onload = function(){
 </nav>
 <div class="res_form grey center">
     <div class="res_form2">
-<img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
-    <h1>Table reservation</h1>
-    <h4>Table reservation details:</h4>
-    <span> Reservation date and time: <?php echo "$date $start"?></span><br>
-    <span> Reservation duration: <?php echo $res_duration?></span><br>
-    <h4>Contact details:</h4>
-    <span> Name: <?php echo "$firstname $lastname"?></span><br>
-    <span> Email: <?php echo $email?></span><br>
-    <span> Phone number: <?php echo $phn?></span><br>
-    <h3>Do you want to confirm the reservation?</h3>
-    <form action="teevaraus.php" method='post'>
-    <div class="button center">
-    <input type='submit' class="send" name='ok' value='Confirm reservation'>
-        <button class="cancel" onclick="history.go(-1);">Cancel </button>
-    </form>
+        <img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
+        <h1>Table reservation</h1>
+        <section class="center">
+            <h5>Table reservation details:</h5>
+            <span> Table for <?php
+            if ($table==5) {echo "1-2 guests";}
+            else if ($table==8) {echo "3-4 guests";}
+            else if ($table==15) {echo "4-8 guests";}
+            else if ($table==25) {echo "8-16 guests";}
+            else if ($table==40) {echo "+16 guests";}?>
+            </span><br>
+            <span> Reservation date and time: <?php echo "$date $start"?></span><br>
+            <span> Reservation duration: 
+                <?php 
+                if ($res_duration==10) {echo "1 hour";}
+                else if ($res_duration==15) {echo "2 hours";}
+                else if ($res_duration==25) {echo "3 hours";}
+                else if ($res_duration==30) {echo "4 hours";}?>
+                </span><br>
+        </section><br>
+        <section class="center">
+            <h5>Contact details:</h5>
+            <span> Name: <?php echo "$firstname $lastname"?></span><br>
+            <span> Email: <?php echo $email?></span><br>
+            <span> Phone number: <?php echo $phn?></span><br><br>
+        </section>
+        <h4><b>Reservation total: <?php echo "$price €"?></b></h4>
+        <h3>Do you want to continue to payment?</h3>
+        <form action="payment.php" method='post'>
+            <div class="button center">
+                <button class="cancel" onclick="history.go(-2);">&#128473; Cancel</button>
+                <input type='submit' class="send" name='ok' value='Continue &#10004;'>
+            </form>
+        </div>
     </div>
- </div>
 </div>
 <footer>
       <div class="footer">  
           <div class="row">
               <div class="column use-links">
-                  <p>Rastorinte</p>
-                  
+                  <p>Rastorinte</p>                 
                       <p><a href="menu.html" style="font-size: 13px;">Menu</a></p>
                       <p><a href="index.html" style="font-size: 13px;">Home</a></p>
                       <p><a href="gallery.html" style="font-size: 13px;">Gallery</a></p>

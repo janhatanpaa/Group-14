@@ -55,7 +55,7 @@ else {
 }
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
-$sql="insert into reservations (firstname, lastname, email, phn, date, start, res_duration, table_size) values(?, ?, ?, ?, ?, ?, ?, ?)";
+$sql="insert into reservations (firstname, lastname, email, phn, date, start, res_duration, guest_amount) values(?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt=mysqli_prepare($yhteys, $sql);
 //Sijoitetaan muuttujat oikeisiin paikkoihin

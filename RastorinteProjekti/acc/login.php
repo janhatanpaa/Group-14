@@ -15,10 +15,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	$pass = validate($_POST['password']);
 
 	if (empty($uname)) {
-		header("Location: index.php?error=Käyttäjätunnus vaaditaan");
+		header("Location: index.php?error=Username is required");
 	    exit();
 	}else if(empty($pass)){
-        header("Location: index.php?error=Salasana vaaditaan");
+        header("Location: index.php?error=Password is required");
 	    exit();
 	}else{
 		// hashing the password

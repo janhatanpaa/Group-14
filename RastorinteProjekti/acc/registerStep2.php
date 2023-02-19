@@ -23,18 +23,18 @@ if (isset($_POST['firstname'])
 	$phn = validate($_POST['phn']);
 	$email = validate($_POST['email']);
 	$pass = validate($_POST['password']);
-	$confirm_pass = validate($_POST['confirm_password']);
+	$confirm_password = validate($_POST['confirm_password']);
 
 	$user_data = 'firstname='. $firstname. '&lastname='. $lastname. '&uname='. $uname. '&phn='. $phn; '&email='. $email;
 
 	
 	if(empty($firstname)){
-        header("Location: register.php?error=Enter first name&$user_data");
+        header("Location: register.php?error=Enter firstname&$user_data");
 	    exit();
 	}
 	
 	else if(empty($lastname)){
-        header("Location: register.php?error=Enter last name&$user_data");
+        header("Location: register.php?error=Enter lastname&$user_data");
 	    exit();
 	}
 
@@ -49,7 +49,7 @@ if (isset($_POST['firstname'])
 	}
 	
 	else if(empty($phn)){
-        header("Location: register.php?error=Enter phonenumber&$user_data");
+        header("Location: register.php?error=Enter phone number&$user_data");
 	    exit();
 	}
 
@@ -63,10 +63,11 @@ if (isset($_POST['firstname'])
 	    exit();
 	}
 
+
 	else if(empty($pass)){
-        header("Location: register.php?error=Enter password&$user_data");
-	    exit();
-	}
+	header("Location: register.php?error=Enter password&$user_data");
+	exit();
+    }
 
 	else if (strlen($pass) < 8) {
 		header("Location: register.php?error=Password must be at least 8 characters&$user_data");
@@ -80,13 +81,13 @@ if (isset($_POST['firstname'])
 		header("Location: register.php?error=Password must contain at least one number&$user_data");
 	}
 
-	else if(empty($confirm_pass)){
-        header("Location: register.php?error=Re-enter password&$user_data");
+	else if(empty($confirm_password)){
+        header("Location: register.php?error=Confirm password&$user_data");
 	    exit();
 	}
 
-	else if($pass !== $confirm_pass){
-        header("Location: register.php?error=Passwords are not the same&$user_data");
+	else if($pass !== $confirm_password){
+        header("Location: register.php?error=Passwords do not match&$user_data");
 	    exit();
 	}
 

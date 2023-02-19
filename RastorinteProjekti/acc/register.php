@@ -21,7 +21,7 @@
 </nav>
 <br>
      <div class="wrapper">
-     <form class="form2" action="registerStep2.php" method="post">
+     <form class="form2" action="registerstep2.php" method="post">
      	<h5>Create account</h5>
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
@@ -31,7 +31,7 @@
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
 
-          <label>First name</label>
+          <label>Firstname</label>
           <?php if (isset($_GET['firstname'])) { ?>
                <input type="text" 
                       name="firstname" 
@@ -43,7 +43,7 @@
                       placeholder="Firstname"><br>
           <?php }?>
           
-          <label>Last name</label>
+          <label>Lastname</label>
           <?php if (isset($_GET['lastname'])) { ?>
                <input type="text" 
                       name="lastname" 
@@ -52,9 +52,8 @@
           <?php }else{ ?>
                <input type="text" 
                       name="lastname" 
-                      placeholder="lastname"><br>
+                      placeholder="Lastname"><br>
           <?php }?>
-
 
           <label>Username</label>
           <?php if (isset($_GET['uname'])) { ?>
@@ -67,6 +66,7 @@
                       name="uname" 
                       placeholder="Username"><br>
           <?php }?>
+
           <label>Phone number</label>
           <?php if (isset($_GET['phn'])) { ?>
                <input type="text" 
@@ -78,6 +78,7 @@
                       name="phn" 
                       placeholder="Phone number"><br>
           <?php }?>
+
           <label>Email</label>
           <?php if (isset($_GET['email'])) { ?>
                <input type="text" 
@@ -90,14 +91,14 @@
                       placeholder="Email"><br>
           <?php }?>
 
-     	<label>Password</label>
+          <label>Password</label>
      	<input type="password" 
                  name="password" 
                  placeholder="Password"><br>
 
-          <label>Confirm password</label>
+          <label>Confirm Password</label>
           <input type="password" 
-                 name="Confirm password" 
+                 name="confirm_password" 
                  placeholder="Confirm password"><br>
 
      	<button type="submit">Create account</button>

@@ -38,13 +38,13 @@ window.onload = function(){
 }
 </script>
     <header>
-        <a href="index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
+        <a href="../../index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
     </header>
     <nav>
         <div class="navbar grey topBotomBordersIn">
-            <a href="menu.html" style="font-size: 15px;">Menu</a>
-            <a href="index.html" style="font-size: 24px;">Home</a>
-            <a href="gallery.html" style="font-size: 15px;">Gallery</a>
+            <a href="../../menu.html" style="font-size: 15px;">Menu</a>
+            <a href="../../index.html" style="font-size: 24px;">Home</a>
+            <a href="../../gallery.html" style="font-size: 15px;">Gallery</a>
         </div>
     </nav>
     <div class="res_form center">

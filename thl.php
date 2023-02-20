@@ -25,88 +25,13 @@
     </div>
 </nav>
 <body>
-    <h1>Work application form</h1>
-    <div class="row2">
-
-        
-        <div class="column">
-            <table class="table">
-            <tr>
-                <td>
-                    <p2>First name</p2>
-                </td>
-                <td>
-                    <form action='RastorinteProjekti/acc/thl_email.php' method='post'>
-                    <input type='text' name='nimi'>
-                </td>  
-                
-            </tr>
-
-            <tr>
-                <td>
-                    <p2>Last name</p2>
-                </td>
-                <td>
-                    
-                    <input type='text' name='sukunimi'>
-                </td>  
-                
-            </tr>
-
-            <tr>
-                <td>
-                    <p2>Email</p2>
-                </td>
-                <td>
-                    
-                    <input type='text' name='sahkoposti'>
-                </td>  
-                
-            </tr>
-
-            <tr>
-                <td>
-                    <p2>Phone number</p2>
-                </td>
-                <td>
-                    
-                    <input type='text' name='puh'>
-                </td>  
-                
-            </tr>
-            <tr>
-                <td>
-                    <p2>message</p2>
-                </td>
-                <td>
-                    
-                    <input class="form_message" type='text' name='viesti'>
-                </td>  
-                
-            </tr>
-
-            <tr>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                    <input type='submit' value='Ok'><br>
-                    
-                </td>
-                
-            </tr>
-        </form>
-        </table>
-            
-                
-                
-        </div>
-    </div>
-
-    
-</body>
-
+    <form class="" action="send.php" method="post">
+        Email <input type="email" name="email" value=""> <br>
+        Subject <input type="text" name="subject" value=""> <br>
+        Message <input type="text" name="message" value=""> <br>
+        <button type="submit" name="send">Send</button>
+    </form>
+    </body>
 
     
     

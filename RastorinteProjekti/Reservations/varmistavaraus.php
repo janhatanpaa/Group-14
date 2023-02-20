@@ -42,7 +42,7 @@ $_SESSION["price"]=$price;
 </header>
 <script>
 window.onload = function(){
-    window.scrollTo(490, 490);
+    window.scrollTo(440, 440);
 }
 </script>
 

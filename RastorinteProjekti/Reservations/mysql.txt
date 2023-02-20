@@ -12,7 +12,7 @@ primary key (user_id)
 CREATE TABLE reservations (
 res_id int(11) NOT NULL auto_increment, 
 PRIMARY KEY(res_id), 
-user_id int, 
+user_id INT, 
 FOREIGN KEY (user_id) REFERENCES users(user_id), 
 firstname varchar(255) NOT NULL, 
 lastname varchar(255) NOT NULL, 
@@ -20,5 +20,9 @@ email varchar(255) NOT NULL,
 phn varchar(60) NOT NULL, 
 date date NOT NULL, 
 start varchar(6) NOT NULL, 
-res_duration varchar(255) NOT NULL 
+res_duration varchar(255) NOT NULL, 
+guest_amount VARCHAR(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+
+alter table reservations rename column table_size to guest_amount;

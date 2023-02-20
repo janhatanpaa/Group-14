@@ -1,0 +1,412 @@
+body {
+	justify-content: center;
+	font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    background-image: url(../assets/food2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.form1 {
+	width: 25%;
+	height: auto;
+	border: 5mm ridge #d4a373;
+	padding: 50px;
+	background: rgb(47, 47, 47);
+	border-radius: 25px;
+	opacity: 0.8;
+    align-items: center;
+}
+
+.form2 {
+	width: 25%;
+	height: 80%;
+	border: 5mm ridge #d4a373;
+	padding: 50px;
+	background: rgb(47, 47, 47);
+	border-radius: 25px;
+	opacity: 0.8;
+    align-items: center;
+    height: 80vh;
+}
+
+.form3{
+    width: 25%;
+	height: 80%;
+	border: 5mm ridge #d4a373;
+	padding: 50px;
+	background: rgb(47, 47, 47);
+	border-radius: 25px;
+	text-align: center;
+	opacity: 0.8;
+	color: #fff;
+}
+
+.hlinks{
+	text-decoration: none;
+	color:white;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.hlinks:hover{
+	opacity: .7;
+}
+
+h4 {
+	text-align: center;
+	color: white;
+}
+
+h5 {
+	text-align: center;
+	margin-bottom: 30px;
+	color:White;
+}
+
+label {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+}
+
+button {
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	border: none;
+	font-size:15px;
+}
+
+button:hover{
+	opacity: .7;
+}
+
+input {
+	display: flex;
+	width: 100%;
+	border-radius: 2.5px;
+	padding: 5px;
+	margin: auto;
+}
+
+.error {
+	background: #eb9595;
+	color: #842625;
+	padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+	text-align: center;
+ }
+
+
+ .ca{
+	background: #555;
+	padding: 10px 10px;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	float:right;
+	font-size:15px;
+ }
+
+.ca:hover{
+	opacity: .7;
+}
+
+
+
+
+
+
+/* css change  */
+
+
+
+
+
+
+
+header {
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+}
+
+.introduction {
+    font-family: "Microsoft Yi Baiti";
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+    width: 75%;
+    margin: 50px auto;
+}
+
+.contactbutton {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+span {
+    font-family: "Aparajita";
+    color: #FFF;
+    font-size: 18px;
+    
+}
+
+.servicesimg{
+    height: 75%;
+    width: 99%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+section {
+    padding-top: 3cm;
+    padding-bottom: 4cm;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 300px;
+    height:150px;
+    padding-top: 1.6em;
+    display: block;  
+}
+
+h1 {
+    text-align: center;
+    color: #FFF;
+    font-family: "papyrus";
+    font-size: 50px;
+    font-weight:100;
+}
+
+h2 {
+    text-align: center;
+    color: #FFF;
+    font-family: "papyrus";
+    font-size: 40px;
+    font-weight:100;
+}
+
+h3 {
+    text-align: center;
+    color: #FFF;
+    font-family: "papyrus";
+    font-size: 20px;
+    font-weight:400;
+}
+p {
+    font-family: "Microsoft Yi Baiti";
+    text-align: center;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.con {
+    padding-bottom: 2cm;
+}
+
+
+.laatikko {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 21px 21px 21px 21px;
+    padding: 1em;
+    font-family: Microsoft Yi Baiti;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+.contactus {
+    color: rgb(0, 0, 0);
+    background-color: rgb(215, 215, 215);
+    border-radius: 21px 21px 21px 21px;
+    padding: 1em;
+    font-family: "Microsoft Yi Baiti";
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contactus:hover {
+    background-color: rgba(92, 92, 92, 0.781);
+    color: #c7c7c7;
+
+}
+
+.grey
+{
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+}
+
+.navbar
+{
+    margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.navbar a
+{
+    font: 20px "Copperplate Gothic Light";
+    color: #FFF;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.table{
+    text-align: center;
+    padding: 6px;
+    margin: auto;
+    text-transform: uppercase;
+}
+.row2{
+    
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    font-family: "Microsoft Yi Baiti";
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.p2{
+    flex: 33.33%;
+    padding: 5px;
+    color: #0000;
+    text-align: left;
+    
+
+}
+.row {
+    display: flex;
+  }
+
+.column {
+    flex: 33.33%;
+    padding: 30px;
+    
+}
+
+
+div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.711);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersIn a:before
+{
+    top: 1px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.footer 
+{
+    margin: 0 auto;
+    color: #FFF;
+    background-color: #00000073;
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+    text-align: center;
+    overflow:auto; padding: 1em 0em;
+}
+
+.footer p {
+    font-family: "Copperplate Gothic Light";
+    color: #FFF;
+    text-align: center;
+    line-height: 15px;
+    
+}
+.copyright {
+    margin: 0 auto;
+    color: #FFF;
+    background-color: #00000073;
+    background-color: #3e3e3e73; 
+    opacity: 100%;
+    text-align: center;
+}
+
+ol {
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.useful-link h2{
+    padding-top: 9px;
+	padding-bottom: 1px;
+	font-size: 20px;
+    font-weight: 600;
+}
+
+.useful-link img{
+	padding-bottom: 15px;
+}
+
+.use-links{
+	line-height: 32px;
+}
+
+.use-links li i{
+	font-size: 14px;
+    padding-right: 8px;
+    color: #898989;
+}
+
+@media (max-width: 480px) {
+    section {
+        width: fit-content;
+    }
+    .row {
+        display:block;
+    }
+    .servicesimg {
+        padding-top: 1cm;
+        box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 5px;
+
+    }
+    body {
+        background-image: url(../assets/mobilebg.png);
+        background-size: cover;
+        background-position: center top;
+    }
+    
+}

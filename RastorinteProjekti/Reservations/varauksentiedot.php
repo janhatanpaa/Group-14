@@ -46,9 +46,9 @@ window.onload = function(){
 <nav>
     <div class="navbar grey topBotomBordersIn">
         <a href="../../menu.html" style="font-size: 15px;">Menu</a>
-        <a href="../../index.html" style="font-size: 24px;">Home</a>
+        <a href="../../index.html" style="font-size: 15px;">Home</a>
         <a href="../../gallery.html" style="font-size: 15px;">Gallery</a>
-        <a href="../../rastorinteprojekti/acc/index.php" style="font-size: 15px; position: absolute; top: 27.5%; left: 75%;">Account</a>
+        <a href="../../rastorinteprojekti/acc/index.php" style="font-size: 15px;">Account</a>
     </div>
 </nav>
 <nav>

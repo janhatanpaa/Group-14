@@ -50,6 +50,6 @@ $phn=isset($_SESSION["phn"]) ? $_SESSION["phn"] : "";
     <td><button>Edit</button></td>
   </tr>
 </table> 
-<a href="../home.php">My page</a>
+<a href="../acc/home.php">My page</a>
 </body>
 </html>

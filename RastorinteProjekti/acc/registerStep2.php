@@ -1,6 +1,14 @@
 <?php 
 session_start(); 
-include "db_conn.php";
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+try{
+    $conn=mysqli_connect("db", "root", "password", "test_db");
+}
+catch(Exception $e){
+    header("Location:../html/yhteysvirhe.html");
+    exit;
+}
 
 if (isset($_POST['firstname']) 
 	&& isset($_POST['lastname'])

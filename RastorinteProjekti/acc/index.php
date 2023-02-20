@@ -14,9 +14,9 @@
 <nav>
     <div class="navbar grey topBotomBordersIn">
         <a href="../../menu.html" style="font-size: 15px;">Menu</a>
-        <a href="../../index.html" style="font-size: 24px;">Home</a>
+        <a href="../../index.html" style="font-size: 15px;">Home</a>
         <a href="../../gallery.html" style="font-size: 15px;">Gallery</a>
-        <a href="index.php" class="acc" style="font-size: 15px; position: absolute; top: 27.5%; left: 75%;">Account</a>
+        <a href="index.php" style="font-size: 15px;">Account</a>
     </div>
 </nav>
 <br>
@@ -45,6 +45,7 @@
                       <p><a href="../../menu.html" style="font-size: 13px;">Menu</a></p>
                       <p><a href="../../index.html" style="font-size: 13px;">Home</a></p>
                       <p><a href="../../gallery.html" style="font-size: 13px;">Gallery</a></p>
+                      <p><a href="index.php" style="font-size: 13px;">Account</a></p>
                   </div>
               <div class="column use-links">
                   <p>Follow Us</p>          

@@ -34,14 +34,15 @@ window.onload = function(){
           <td>
             <p>Reservation date:</p>
           </td>
-          <td><input class="date" type="date" name='date'></td>
+          <td><input class="date" type="date" name='date' required></td>
         </tr>
           <tr>
             <td>
               <p>Reservation time:</p>
             </td>
             <td>
-              <select type="time" name="start">
+              <select type="time" name="start" required>
+                <option value="" selected disabled hidden>Starting time</option>
                 <option value="14:00">14:00</option>
                 <option value="15:00">15:00</option>
                 <option value="16:00">16:00</option>
@@ -57,7 +58,8 @@ window.onload = function(){
               <td>
                 <p>Reservation duration <br>(Max 4 hours):</p>
               </td>
-                <td><select id="duration" name="res_duration">
+                <td><select id="duration" name="res_duration" required>
+                  <option value="" selected disabled hidden>Duration</option>
                   <option value="10">1 Hour</option>
                   <option value="15">2 Hours</option>
                   <option value="25">3 Hours</option>
@@ -68,7 +70,7 @@ window.onload = function(){
                   var drop = document.getElementById("duration");
                     var price = document.getElementById("price");
                     drop.onchange = function() {
-                    price.innerHTML = "€" + drop.value;
+                    price.innerHTML = "Price: " + drop.value + "€";
                     }</script>
               </td>
           </tr>

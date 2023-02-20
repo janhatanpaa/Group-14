@@ -23,9 +23,6 @@ $_SESSION["date"]=$date;
 $_SESSION["start"]=$start;
 $_SESSION["res_duration"]=$res_duration;
 
-if (empty($_POST['date'])) {
-    header ("Location:./filldate.html");
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,32 +58,31 @@ window.onload = function(){
       <span>We have table sizes from table for two to table for sixteen guests</span>
         <table>
             <tr>
-            <p>Table size</p>
-<td><select id="guests" name="table">
-  <option value="5">1-2 guests</option>
-  <option value="8">3-4 guests</option>
-  <option value="15">4-8 guests</option>
-  <option value="25">8-16 guests</option>
-  <option value="40">More than 16 guests</option>
-</select>
-</div>
-<p id="price"></p>
-</div>
-<script>
-    var drop = document.getElementById("guests");
-      var price = document.getElementById("price");
-      drop.onchange = function() {
-      price.innerHTML = "€" + drop.value;
-      }</script>
-    </td>
-</tr>
-</table>
-<button class="cancel" onclick="history.go(-1);">&#129136; Back</button> 
-<input style="width: 100px;" class="send" type='submit' name='ok' value='Next &#129138;'>
-</form>
-</div>
-</div>
-<footer>
+                <td>
+                    <select style="margin-top: 2em;" id="guests" name="table" required>
+                        <option value="" selected disabled hidden>Table size</option>
+                        <option value="5">1-2 guests</option>
+                        <option value="8">3-4 guests</option>
+                        <option value="15">4-8 guests</option>
+                        <option value="25">8-16 guests</option>
+                        <option value="40">More than 16 guests</option>
+                    </select>
+                    <p id="price"></p>
+                        <script>
+                            var drop = document.getElementById("guests");
+                            var price = document.getElementById("price");
+                            drop.onchange = function() {
+                            price.innerHTML = "Price: " + drop.value + "€";      }
+                        </script>
+                    </td>
+                </tr>
+            </table>
+            <button class="cancel" onclick="history.go(-1);">&#129136; Back</button> 
+                <input style="width: 100px;" class="send" type='submit' name='ok' value='Next &#129138;'>
+            </form>
+        </div>
+    </div>
+    <footer>
       <div class="footer">  
           <div class="row">
               <div class="column use-links">

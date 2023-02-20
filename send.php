@@ -21,12 +21,15 @@ if(isset($_POST["send"])){
 
     $mail->setFrom('rastorinte@gmail.com');
 
-    $mail->addAddress($_POST["email"]);
+    $mail->addAddress('rastorinte@gmail.com');
     
     $mail->isHTML(true);
 
-    $mail->Subject = $_POST["subject"];
-    $mail->Body = $_POST["message"];
+    $mail->Subject = "Work application";
+    $mail->Body = 'Name: ' . $_POST["name"] . '<br>' . 
+    'Last Name: ' . $_POST["lastname"] . '<br>' .
+    'Email: ' . $_POST["email"] . '<br>' .
+    'Message: ' . $_POST["message"];
 
     $mail->send();
 

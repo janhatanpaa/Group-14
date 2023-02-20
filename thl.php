@@ -25,12 +25,89 @@
     </div>
 </nav>
 <body>
-    <form class="" action="send.php" method="post">
-        Email <input type="email" name="email" value=""> <br>
-        Subject <input type="text" name="subject" value=""> <br>
-        Message <input type="text" name="message" value=""> <br>
-        <button type="submit" name="send">Send</button>
-    </form>
+    
+    <h1>Work application form</h1>
+    <div class="row2">
+
+        
+        <div class="column">
+        <form action='send.php' method='post'>
+            <table class="table">
+            <tr>
+                <td>
+                    <p2>First name</p2>
+                </td>
+                <td>
+                    
+                    <input type='text' name='name'>
+                </td>  
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <p2>Last name</p2>
+                </td>
+                <td>
+                    
+                    <input type='text' name='lastname'>
+                </td>  
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <p2>Email</p2>
+                </td>
+                <td>
+                    
+                    <input type='email' name='email'>
+                </td>  
+                
+            </tr>
+
+            <tr>
+                <td>
+                    <p2>Phone number</p2>
+                </td>
+                <td>
+                    
+                    <input type='text' name='phone'>
+                </td>  
+                
+            </tr>
+            <tr>
+                <td>
+                    <p2>message</p2>
+                </td>
+                <td>
+                    
+                    <input class="form_message" type='text' name='message'>
+                </td>  
+                
+            </tr>
+
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                    <input type='submit' name="send"><br>
+                    
+                </td>
+                
+            </tr>
+        </form>
+        </table>
+            
+                
+                
+        </div>
+    </div>
+
+    
+
     </body>
 
     

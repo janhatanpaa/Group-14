@@ -28,6 +28,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
      <a href="../Reservations/poytavaraus.html" class="hlinks">Make a table reservation</a><br>
      <a href="../Reservations/??????" class="hlinks">My reservations</a><br>
      <a href="../Reservations/myinfo.php" class="hlinks">Change my information</a><br>
+     <a href="../../thl.html" class="hlinks">Apply for a job</a><br>
      <a href="logout.php" class="hlinks">Sign out</a>
 </form>
 </div>

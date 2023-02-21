@@ -35,13 +35,16 @@ window.onload = function(){
           <td>
             <p>Reservation date:</p>
           </td>
-          <td><input class="date" type="date" name='date' required></td>
+          <td><input class="date" type="date" id="datePickerId" max="2023-12-31" name='date' required></td>
         </tr>
           <tr>
             <td>
               <p>Reservation time:</p>
             </td>
             <td>
+              <script>
+              datePickerId.min = new Date().toISOString().split("T")[0];
+              </script>
               <select type="time" name="start" required>
                 <option value="" selected disabled hidden>Starting time</option>
                 <option value="14:00">14:00</option>

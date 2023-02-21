@@ -12,6 +12,7 @@ catch(Exception $e){
 
 //Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
 //jos syötteet ovat olemassa
+$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
@@ -35,7 +36,7 @@ $table=isset($_SESSION["table"]) ? $_SESSION["table"] : "";
 <body>
     <script>
 window.onload = function(){
-    window.scrollTo(390, 390);
+    window.scrollTo(365, 365);
 }
 </script>
     <header>
@@ -53,7 +54,7 @@ window.onload = function(){
         <div class="res_form2">
             <form id='varauslomake' method='post' action='varmistavaraus.php'>
                 <h1>Table reservation</h1>
-                <h4>Choose payment method:</h4>    
+                <h6>Choose a payment method:</h6>    
                 <div class="column">
                     <div class="row center">
                         <a href="./teevaraus.php"><img class="bank" src="../../assets/bank/osuuspankki.svg" alt="osuuspankki"></a>

@@ -12,7 +12,7 @@ catch(Exception $e){
 
 //Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
 //jos syötteet ovat olemassa
-
+$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
@@ -43,7 +43,7 @@ $_SESSION["price"]=$price;
 </header>
 <script>
 window.onload = function(){
-    window.scrollTo(440, 440);
+    window.scrollTo(385, 385);
 }
 </script>
 
@@ -83,12 +83,11 @@ window.onload = function(){
             <span> Email: <?php echo $email?></span><br>
             <span> Phone number: <?php echo $phn?></span><br><br>
         </section>
-        <h4><b>Reservation total: <?php echo "$price €"?></b></h4>
-        <h3>Do you want to continue to payment?</h3>
+        <h6><b>Reservation total: <?php echo "$price €"?></b></h6>
         <form action="payment.php" method='post'>
-            <div class="button center">
+            <div class="button">
+                <input type='submit' class="proceed" name='ok' value='Proceed to checkout &#10004;'><br>
                 <button class="cancel" onclick="history.go(-2);">&#128473; Cancel</button>
-                <input type='submit' class="send" name='ok' value='Continue &#10004;'>
             </form>
         </div>
     </div>

@@ -12,7 +12,7 @@ catch(Exception $e){
 
 //Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
 //jos syötteet ovat olemassa
-
+$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
@@ -55,11 +55,11 @@ else {
 }
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
-$sql="insert into reservations (firstname, lastname, email, phn, date, start, res_duration, guest_amount) values(?, ?, ?, ?, ?, ?, ?, ?)";
+$sql="insert into reservations (user_id, firstname, lastname, email, phn, date, start, res_duration, guest_amount) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt=mysqli_prepare($yhteys, $sql);
 //Sijoitetaan muuttujat oikeisiin paikkoihin
-mysqli_stmt_bind_param($stmt, 'ssssssss', $firstname, $lastname, $email, $phn, $date, $start, $duration, $guest_amount);
+mysqli_stmt_bind_param($stmt, 'issssssss', $id, $firstname, $lastname, $email, $phn, $date, $start, $duration, $guest_amount);
 //Suoritetaan sql-lause
 mysqli_stmt_execute($stmt);
 //Suljetaan tietokantayhteys

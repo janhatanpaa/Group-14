@@ -12,6 +12,7 @@ catch(Exception $e){
 
 //Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
 //jos syötteet ovat olemassa
+$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
@@ -40,7 +41,7 @@ $_SESSION["res_duration"]=$res_duration;
 </header>
 <script>
 window.onload = function(){
-    window.scrollTo(350, 350);
+    window.scrollTo(340, 340);
 }
 </script>
 <nav>

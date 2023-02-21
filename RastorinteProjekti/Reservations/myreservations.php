@@ -2,26 +2,23 @@
 session_start();
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-try{
-    $yhteys=mysqli_connect("db", "root", "password", "test_db");
-}
-catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
-}
 
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
-$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
-$firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
-$lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
-$email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
-$phn=isset($_SESSION["phn"]) ? $_SESSION["phn"] : "";
-$date=isset($_SESSION["date"]) ? $_SESSION["date"] : "";
-$start=isset($_SESSION["start"]) ? $_SESSION["start"] : 0;
-$res_duration=isset($_SESSION["res_duration"]) ? $_SESSION["res_duration"] : "";
-$table=isset($_SESSION["table"]) ? $_SESSION["table"] : "";
-$price=isset($_SESSION["price"]) ? $_SESSION["price"] : "";
+$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : "";
+
+//yhteyden muodostus
+$yhteys=mysqli_connect("db", "root", "password");
+if (!$yhteys){
+    die("Yhteys epäonnistui".mysqli_error());
+}
+//tietokannan valinta
+$ok=mysqli_select_db($yhteys, "test_db");
+if (!$ok){
+    die("Tietokannan valinta epäonnistui".mysqli_error());
+}
+//Kyselyn tekeminen 
+$tulos=mysqli_query($yhteys, "select * from reservations where user_id= '$id'");
+
+//Tulostietojen tulostus
 
 ?>
 <!DOCTYPE html>
@@ -32,8 +29,7 @@ $price=isset($_SESSION["price"]) ? $_SESSION["price"] : "";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/rastorintefavicon.png">
     <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
-    <title>Table reservation - Rastorinte</title>
-
+    <title>My reservations - Rastorinte</title>
 </head>
 <body>
 <script>
@@ -56,42 +52,22 @@ window.onload = function(){
     <div class="res_form grey center">
         <div class="res_form2">
             <img class="reserveimg" src="../../assets/reserve2.jpg" alt="">
-            <h1>Thank you for your reservation!</h1>
+            <h1>My reservations</h1>
         <section>
         <h5>Table reservation details:</h5>
-        <span> Table for <?php
-            if ($table==5) {echo "1-2 guests";}
-            else if ($table==8) {echo "3-4 guests";}
-            else if ($table==15) {echo "4-8 guests";}
-            else if ($table==25) {echo "8-16 guests";}
-            else if ($table==40) {echo "+16 guests";}?>
-            </span><br>
-        <span> Reservation date and time: <?php echo "$date $start"?></span><br>
-        <span> Reservation duration: 
-                <?php 
-                if ($res_duration==10) {echo "1 hour";}
-                else if ($res_duration==15) {echo "2 hours";}
-                else if ($res_duration==25) {echo "3 hours";}
-                else if ($res_duration==30) {echo "4 hours";}?>
-                </span><br>
-        <span><b>Reservation total: <?php echo "$price €"?></b></span>
+        <section>
+    <?php 
+    while ($rivi=mysqli_fetch_object($tulos)){
+        echo "Reservor: $rivi->firstname $rivi->lastname <br> Date of the reservation: $rivi->date <br> Starting time: $rivi->start <br> Reservation duration: $rivi->res_duration <br> Table size: $rivi->guest_amount<br><br>\n";}?>
     </section>
-    <section>
-        <h5>Contact details:</h5>
-        <span> Name: <?php echo "$firstname $lastname"?></span><br>
-        <span> Email: <?php echo $email?></span><br>
-        <span> Phone number: <?php echo $phn?></span>
-    </section>
-    
-        <button class="end"><a href="../acc/home.php">Home</a></button>
+     <button class="end"><a href="../acc/home.php">Back</a></button>
     </div>
 </div>
 <footer>
         <div class="footer">  
             <div class="row">
                 <div class="column use-links">
-                    <p>Rastorinte</p>
-                    
+                    <p>Rastorinte</p>                   
                         <p><a href="menu.html" style="font-size: 13px;">Menu</a></p>
                         <p><a href="index.html" style="font-size: 13px;">Home</a></p>
                         <p><a href="gallery.html" style="font-size: 13px;">Gallery</a></p>

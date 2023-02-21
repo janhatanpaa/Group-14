@@ -30,11 +30,33 @@ $tulos=mysqli_query($yhteys, "select * from reservations where user_id= '$id'");
     <link rel="icon" type="image/x-icon" href="../../assets/rastorintefavicon.png">
     <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
     <title>My reservations - Rastorinte</title>
+    <style>
+        
+    table, td, th {
+    padding: 5px;
+    
+    }
+    th {
+        background-color: #494949ac;
+        color: white;
+        box-shadow: 5px 10px 18px #888888;
+        font-weight: 100;
+    }
+    td {
+        background-color: #ffffff89;
+        box-shadow: 5px 10px 18px #888888;
+    }
+
+    table {
+        width: 80%;
+        border-collapse: collapse;
+    }
+</style>
 </head>
 <body>
 <script>
 window.onload = function(){
-    window.scrollTo(350, 350);
+    window.scrollTo(320, 320);
 }
 </script>
 <header>
@@ -58,7 +80,27 @@ window.onload = function(){
         <section>
     <?php 
     while ($rivi=mysqli_fetch_object($tulos)){
-        echo "Reservor: $rivi->firstname $rivi->lastname <br> Date of the reservation: $rivi->date <br> Starting time: $rivi->start <br> Reservation duration: $rivi->res_duration <br> Table size: $rivi->guest_amount<br><br>\n";}?>
+        ?>
+        <table>
+        <tr>
+            <th>Reservation date</th>
+            <th>Reservor</th>            
+            <th>Starting time</th>
+            <th>Duration</th>
+            <th>Table size</th>
+        </tr>
+        <tr>
+            <?php 
+            echo 
+            "<td> $rivi->date</td>
+            <td>$rivi->firstname $rivi->lastname</td>           
+            <td>$rivi->start</td>
+            <td>$rivi->res_duration</td>
+            <td>$rivi->guest_amount</td>";
+        }           
+        ?>
+        </tr>
+    </table>
     </section>
      <button class="end"><a href="../acc/home.php">Back</a></button>
     </div>

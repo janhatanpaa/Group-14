@@ -29,6 +29,7 @@ if(isset($_POST["send"])){
     $mail->Body = 'Name: ' . $_POST["name"] . '<br>' . 
     'Last Name: ' . $_POST["lastname"] . '<br>' .
     'Email: ' . $_POST["email"] . '<br>' .
+    'Phone number: ' . $_POST["phone"] . '<br>' .
     'Information about the person: ' . $_POST["message"];
 
     $mail->send();

@@ -78,7 +78,7 @@
             </tr>
             <tr>
                 <td>
-                    <p2>message</p2>
+                    <p2>Tell something <br> about yourself</p2>
                 </td>
                 <td>
                     

@@ -308,6 +308,7 @@ table {
 }
 input:hover {
     background-color: #636363;
+    color: #FFF;
 }
 select {
     height: 35px;

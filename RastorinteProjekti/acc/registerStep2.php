@@ -122,9 +122,8 @@ if (isset($_POST['firstname'])
            $sql2 = "INSERT INTO users(user_name, password, firstname, lastname, email, phn) VALUES('$uname', '$pass', '$firstname', '$lastname', '$email', '$phn')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
-           	 echo "Account has been created succesfully <br>";
-			 echo ' <a href="login.php">Sign in</a>';
-	         exit();
+			header("Location: login.php?");
+		        exit();
            }else {
 	           	header("Location: register.php?error=unknown error occurred&$user_data");
 		        exit();
@@ -136,3 +135,5 @@ if (isset($_POST['firstname'])
 	header("Location: register.php");
 	exit();
 }
+?>
+

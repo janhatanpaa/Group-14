@@ -2,16 +2,15 @@
 session_start();
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-try{
-    $yhteys=mysqli_connect("db", "root", "password", "test_db");
-}
-catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
+//yhteyden muodostus tietokantaan
+include ("./connectdb.php");
+
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
+if (empty($_SESSION['user_id'])) {
+    echo '<script> alert("Sign in to make a reservation"); window.location.href="../acc/login.php";</script>'; 
 }
 
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
+//sessionissa olevat tiedot funktiolla $_SESSION
 $id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
@@ -34,6 +33,7 @@ $table=isset($_SESSION["table"]) ? $_SESSION["table"] : "";
     <title>Table reservation - Rastorinte</title>
 </head>
 <body>
+    <!--window.onload funktio lataa sivun lomakkeen kohdalle-->
     <script>
 window.onload = function(){
     window.scrollTo(365, 365);

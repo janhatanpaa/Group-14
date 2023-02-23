@@ -2,17 +2,17 @@
 session_start();
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-try{
-    $yhteys=mysqli_connect("db", "root", "password", "test_db");
-}
-catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
-}
+//yhteyden muodostus tietokantaan
+include ("./connectdb.php");
 
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
+if (empty($_SESSION['user_id'])) {
+    echo '<script> alert("Sign in to make a reservation"); window.location.href="../acc/login.php";</script>'; 
+}
+//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST ja sessionissa olevat tiedot funktiolla $_SESSION
+//laitetaan $_POST tiedot sessioniin
 $id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
+
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
 $email=isset($_SESSION["email"]) ? $_SESSION["email"] : "";
@@ -24,7 +24,6 @@ $table=isset($_POST["table"]) ? $_POST["table"] : "";
 $_SESSION["table"]=$table;
 $price = intval($res_duration) + intval($table);
 $_SESSION["price"]=$price;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,13 +33,13 @@ $_SESSION["price"]=$price;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/rastorintefavicon.png">
     <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
-
     <title>Table reservation - Rastorinte</title>
 </head>
 <body>
 <header>
     <a href="../../index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
 </header>
+<!--window.onload funktio lataa sivun lomakkeen kohdalle-->
 <script>
 window.onload = function(){
     window.scrollTo(385, 385);
@@ -61,7 +60,10 @@ window.onload = function(){
         <h1>Table reservation</h1>
         <section class="center">
             <h5>Table reservation details:</h5>
+            <!--tulostetaan sessionista tiedot lomakkeelle-->
             <span> Table for <?php
+            //table size valikossa valuet numeroina tarkoittaen hintaa
+            //if-else ehtolauseella muutetaan valuet vierasmääriksi, lomakkeelle tulostusta varten
             if ($table==5) {echo "1-2 guests";}
             else if ($table==8) {echo "3-4 guests";}
             else if ($table==15) {echo "4-8 guests";}
@@ -71,6 +73,8 @@ window.onload = function(){
             <span> Reservation date and time: <?php echo "$date $start"?></span><br>
             <span> Reservation duration: 
                 <?php 
+                //res_duration valikossa sama juttu, valuet numeroina tarkoittaen hintaa
+                //if-else ehtolauseella muutetaan valuet tuntimääriksi, lomakkeelle tulostusta varten
                 if ($res_duration==10) {echo "1 hour";}
                 else if ($res_duration==15) {echo "2 hours";}
                 else if ($res_duration==25) {echo "3 hours";}

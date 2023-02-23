@@ -5,7 +5,12 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : "";
 
-//yhteyden muodostus
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
+if (empty($_SESSION['user_id'])) {
+    echo '<script> alert("Sign in to see reservations"); window.location.href="../acc/login.php";</script>'; 
+}
+
+//yhteyden muodostus tietokantaan
 $yhteys=mysqli_connect("db", "root", "password");
 if (!$yhteys){
     die("Yhteys epäonnistui".mysqli_error());
@@ -15,10 +20,8 @@ $ok=mysqli_select_db($yhteys, "test_db");
 if (!$ok){
     die("Tietokannan valinta epäonnistui".mysqli_error());
 }
-//Kyselyn tekeminen 
+//Kyselyn tekeminen $_SESSION 'id:n' perusteella
 $tulos=mysqli_query($yhteys, "select * from reservations where user_id= '$id'");
-
-//Tulostietojen tulostus
 
 ?>
 <!DOCTYPE html>
@@ -30,11 +33,10 @@ $tulos=mysqli_query($yhteys, "select * from reservations where user_id= '$id'");
     <link rel="icon" type="image/x-icon" href="../../assets/rastorintefavicon.png">
     <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
     <title>My reservations - Rastorinte</title>
-    <style>
-        
+    <style>       
     table, td, th {
     padding: 5px;
-    
+
     }
     th {
         background-color: #494949ac;
@@ -54,6 +56,7 @@ $tulos=mysqli_query($yhteys, "select * from reservations where user_id= '$id'");
 </style>
 </head>
 <body>
+    <!--window.onload funktio lataa sivun lomakkeen kohdalle-->
 <script>
 window.onload = function(){
     window.scrollTo(320, 320);
@@ -90,6 +93,7 @@ window.onload = function(){
             <th>Table size</th>
         </tr>
         <tr>
+             <!--tulostetaan tietokantayselyssä saatujen tietojen tiedot lomakkeelle-->
             <?php 
             echo 
             "<td> $rivi->date</td>
@@ -102,7 +106,7 @@ window.onload = function(){
         </tr>
     </table>
     </section>
-     <button class="end"><a href="../acc/home.php">Back</a></button>
+     <button class="cancel"><a style="color: black" href="../acc/home.php">Back</a></button>
     </div>
 </div>
 <footer>

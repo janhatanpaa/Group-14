@@ -2,16 +2,15 @@
 session_start();
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-try{
-    $yhteys=mysqli_connect("db", "root", "password", "test_db");
-}
-catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
-}
+//yhteyden muodostus tietokantaan
+include ("./connectdb.php");
 
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
+if (empty($_SESSION['user_id'])) {
+    echo '<script> alert("Sign in to make a reservation"); window.location.href="../acc/login.php";</script>'; 
+}
+//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST ja sessionissa olevat tiedot funktiolla $_SESSION
+//laitetaan $_POST tiedot sessioniin
 $id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
@@ -39,6 +38,7 @@ $_SESSION["res_duration"]=$res_duration;
 <header>
     <a href="../../index.html"><img class="logo" src="../../assets/rastorinte.png" alt="restaurant-rastorinte"></a>
 </header>
+<!--window.onload funktio lataa sivun lomakkeen kohdalle-->
 <script>
 window.onload = function(){
     window.scrollTo(340, 340);
@@ -62,6 +62,7 @@ window.onload = function(){
         <table>
             <tr>
                 <td>
+                    <!--select 'required' estää syöttämästä tyhjää vaihtoehtoa-->
                     <select style="margin-top: 2em;" id="guests" name="table" required>
                         <option value="" selected disabled hidden>Table size</option>
                         <option value="5">1-2 guests</option>
@@ -71,6 +72,7 @@ window.onload = function(){
                         <option value="40">More than 16 guests</option>
                     </select>
                     <p id="price"></p>
+                    <!--scripti näyttää hinnan vierasmäärälle valitessa vaihtoehdon -->
                         <script>
                             var drop = document.getElementById("guests");
                             var price = document.getElementById("price");

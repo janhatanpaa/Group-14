@@ -1,5 +1,7 @@
 <?php 
 session_start();
+
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
 if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
  ?>
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
 <form class="form3">
      <p>Signed in as user <strong><?php echo $_SESSION['user_name']; ?></strong></p>
      <h4>Hello, <?php echo $_SESSION['firstname']; ?>!</h4>
-     <a href="../Reservations/poytavaraus.html" class="hlinks">Make a table reservation</a><br>
+     <a href="../Reservations/poytavaraus.php" class="hlinks">Make a table reservation</a><br>
      <a href="../Reservations/myreservations.php" class="hlinks">My reservations</a><br>
      <a href="../Reservations/myinfo.php" class="hlinks">Change my information</a><br>
      <a href="../../thl.php" class="hlinks">Apply for a job</a><br>

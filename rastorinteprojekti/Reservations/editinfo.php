@@ -19,17 +19,18 @@ $phn=isset($_SESSION["phn"]) ? $_SESSION["phn"] : "";
     <link rel="icon" type="image/x-icon" href="../../assets/rastorintefavicon.png">
     <link href="../../css/reservations.css" rel="stylesheet" type="text/css">
     <title>My information - Rastorinte</title>
-    <style>
+    <style>             
     table, td, th {
-        padding: 5px;
-    
+        padding: 5px;   
     }
+
     th {
         background-color: #494949ac;
         color: white;
         box-shadow: 5px 10px 18px #888888;
         font-weight: 100;
     }
+
     td {
         background-color: #ffffff89;
         box-shadow: 5px 10px 18px #888888;
@@ -38,6 +39,15 @@ $phn=isset($_SESSION["phn"]) ? $_SESSION["phn"] : "";
     table {
         width: 30%;
         border-collapse: collapse;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    input:hover {
+        background-color: white;
+        color: black;
     }
     </style>
 </head>
@@ -61,43 +71,50 @@ window.onload = function(){
 <div class="res_form grey center">
     <div class="res_form2">
 <h1>My information</h1>
+<!--submit lähettää tiedot updateinfo.php, jossa tietokantaan päivittyy muutokset-->
+<form action="updateinfo.php" method="post">
+<table>
 <table>
   <tr>
     <th>First name</th>
   </tr>
   <tr>
-    <td><?php echo $firstname ?></td>
+    <td><input name="firstname" type="text" value="<?php echo $firstname ?>"></td>
   </tr>
   </table>
   <table>
-    <tr>
-      <th>Last name</th>
-    </tr>
-    <tr>
-      <td><?php echo $lastname ?></td>
-    </tr>
+  <tr>
+    <th>Last name</th>
+  </tr>
+  <tr>
+    <td><input name="lastname" type="text" value="<?php echo $lastname ?>"></td>
+  </tr>
   </table>
   <table>
-    <tr>
-      <th>Email</th>
-    </tr>
-    <tr>
-      <td><?php echo $email ?></td>
-    </tr>
+  <tr>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td><input name="email" type="text" value="<?php echo $email ?>"></td>
+  </tr>
   </table>
   <table>
-    <tr>
-      <th>Phone number</th>
-    </tr>
-    <tr>
-      <td><?php echo $phn ?></td>
-    </tr>
-  </table>
-  <section>
-    <!--linkki editinfo.php, jossa tulostuksen sijaan input, missä voi muuttaa tietoja-->
-    <button class="end"><a class="end" href="editinfo.php">Edit my information</a></button> <br><br>
-    <button class="cancel"><a style="color: black" href="../acc/home.php">Back</a></button> 
-  </section>
+  <tr>
+    <th>Phone number</th>
+  </tr>
+  <tr>
+    <td><input name="phn" type="text" value="<?php echo $phn ?>"></td>
+  </tr>
+</table>
+  <table> 
+</table>
+<section>
+    <!--submit lähettää tiedot, jolloin tietokantaan päivittyy muutokset-->
+    <button class="end"><input class="end" type="submit" value="Submit"></a></button>
+</section>
+</form>
+<!--history.go(-1) palaa yhden sivun taaksepäin-->
+<button class="cancel" onclick="history.go(-1);">&#129136; Cancel</button> 
 </div>
 </div>
 <footer>

@@ -2,16 +2,14 @@
 session_start();
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-try{
-    $yhteys=mysqli_connect("db", "root", "password", "test_db");
-}
-catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
+include ("./connectdb.php");
+
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
+if (empty($_SESSION['user_id'])) {
+    echo '<script> alert("Sign in to make a reservation"); window.location.href="../acc/login.php";</script>'; 
 }
 
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
+//sessionissa olevat tiedot funktiolla $_SESSION
 $id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
 $lastname=isset($_SESSION['lastname']) ? $_SESSION['lastname'] : "";
@@ -36,6 +34,7 @@ $price=isset($_SESSION["price"]) ? $_SESSION["price"] : "";
 
 </head>
 <body>
+    <!--window.onload funktio lataa sivun lomakkeen kohdalle-->
 <script>
 window.onload = function(){
     window.scrollTo(350, 350);
@@ -60,6 +59,8 @@ window.onload = function(){
         <section>
         <h5>Table reservation details:</h5>
         <span> Table for <?php
+            //table size valikossa valuet numeroina tarkoittaen hintaa
+            //if-else ehtolauseella muutetaan valuet vierasmääriksi, lomakkeelle tulostusta varten
             if ($table==5) {echo "1-2 guests";}
             else if ($table==8) {echo "3-4 guests";}
             else if ($table==15) {echo "4-8 guests";}
@@ -69,6 +70,8 @@ window.onload = function(){
         <span> Reservation date and time: <?php echo "$date $start"?></span><br>
         <span> Reservation duration: 
                 <?php 
+                //res_duration valikossa sama juttu, valuet numeroina tarkoittaen hintaa
+                //if-else ehtolauseella muutetaan valuet tuntimääriksi, lomakkeelle tulostusta varten
                 if ($res_duration==10) {echo "1 hour";}
                 else if ($res_duration==15) {echo "2 hours";}
                 else if ($res_duration==25) {echo "3 hours";}

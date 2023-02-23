@@ -1,6 +1,12 @@
 <?php
 session_start();
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
+
+//mikäli käyttäjä ei ole kirjautuneena session id=empty, ohjaus login sivulle 
+if (empty($_SESSION['user_id'])) {
+    echo '<script> alert("Sign in to see reservations"); window.location.href="../acc/login.php";</script>'; 
+}
+
+//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST ja sessionissa olevat tiedot funktiolla $_SESSION
 //jos syötteet ovat olemassa
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $firstname=isset($_SESSION['firstname']) ? $_SESSION['firstname'] : "";
@@ -11,13 +17,7 @@ $date=isset($_POST["date"]);
 $start=isset($_POST["start"]) ? $_POST["start"] : 0;
 $res_duration=isset($_POST["res_duration"]) ? $_POST["res_duration"] : "";
 
-try{
-    $yhteys=mysqli_connect("db", "root", "password", "test_db");
-}
-catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
-}
+include ("./connectdb.php");
 
 ?>
 <!DOCTYPE html>
@@ -29,6 +29,7 @@ catch(Exception $e){
     <title>Reservation info - Rastorinte</title>
 </head>
 <body>
+     <!--tulostetaan sessionista tiedot lomakkeelle-->
     <h1>Reservation information:</h1>
     <form action="./varauksentiedot.php">
         <?php echo "Name: $firstname  $lastname"?><br>

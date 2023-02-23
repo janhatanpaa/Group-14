@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (empty($_SESSION['user_id'])) {
+  echo '<script> alert("Sign in to make a reservation"); window.location.href="../acc/login.php";</script>'; 
+}
+
+$id=isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +29,7 @@
         <a href="../../rastorinteprojekti/acc/index.php" style="font-size: 15px;">Account</a>
     </div>
 </nav>
+<!--window.onload funktio lataa sivun lomakkeen kohdalle-->
 <script>
 window.onload = function(){
     window.scrollTo(340, 340);
@@ -35,6 +45,7 @@ window.onload = function(){
           <td>
             <p>Reservation date:</p>
           </td>
+          <!--max date vuoden loppuun asti-->
           <td><input class="date" type="date" id="datePickerId" max="2023-12-31" name='date' required></td>
         </tr>
           <tr>
@@ -42,9 +53,11 @@ window.onload = function(){
               <p>Reservation time:</p>
             </td>
             <td>
+              <!--datepicker scripti estää valitsemasta pienempää päivää kuin nykyinen-->
               <script>
               datePickerId.min = new Date().toISOString().split("T")[0];
               </script>
+              <!--select 'required' estää syöttämästä tyhjää vaihtoehtoa-->
               <select type="time" name="start" required>
                 <option value="" selected disabled hidden>Starting time</option>
                 <option value="14:00">14:00</option>
@@ -62,6 +75,7 @@ window.onload = function(){
               <td>
                 <p>Reservation duration <br>(Max 4 hours):</p>
               </td>
+              <!--select 'required' estää syöttämästä tyhjää vaihtoehtoa-->
                 <td><select id="duration" name="res_duration" required>
                   <option value="" selected disabled hidden>Duration</option>
                   <option value="10">1 Hour</option>
@@ -70,6 +84,7 @@ window.onload = function(){
                   <option value="30">4 Hours</option>
                 </select>
               <p id="price"></p>
+              <!--scripti näyttää hinnan tunnille valitessa vaihtoehdon -->
               <script>
                   var drop = document.getElementById("duration");
                     var price = document.getElementById("price");

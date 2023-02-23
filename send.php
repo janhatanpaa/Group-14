@@ -6,7 +6,7 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
-
+// koodi lähtee käyntiin kun thl.php sivustosta painetaan nappulaa
 if(isset($_POST["send"])){
     $mail = new PHPMailer(true);
 
@@ -25,7 +25,10 @@ if(isset($_POST["send"])){
     
     $mail->isHTML(true);
 
+    // Sähköpostin aihe
     $mail->Subject = "Work application";
+
+    // Sähköpostin viesti, johon liittyy lomakkeesta nimi, sukunimi, sähköposti, puhelinnumero ja viesti.
     $mail->Body = 'Name: ' . $_POST["name"] . '<br>' . 
     'Last Name: ' . $_POST["lastname"] . '<br>' .
     'Email: ' . $_POST["email"] . '<br>' .
@@ -34,6 +37,7 @@ if(isset($_POST["send"])){
 
     $mail->send();
 
+    // kun sähköposti lähtee liikkeelle. Näytölle tulostuu teksti "Sent Succesfully"
     echo
     "
     <script>
